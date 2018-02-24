@@ -1,0 +1,43 @@
+name:                Kospi200
+version:             0.1.0.0
+github:              "sophia-gold/Kospi200"
+license:             BSD3
+author:              "Sophia Gold"
+maintainer:          "sophiagoldnyc@gmail.com"
+copyright:           "2018 Sophia Gold"
+
+extra-source-files:
+- README.md
+
+description: Code Sample for Tsuru Capital
+
+dependencies:
+- base >= 4.7 && < 5
+- attoparsec
+- bytestring
+- pcap
+
+library:
+  source-dirs: src
+
+executables:
+  Kospi200-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - Kospi200
+
+tests:
+  Kospi200-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - Kospi200
