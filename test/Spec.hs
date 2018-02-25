@@ -1,7 +1,13 @@
-module Spec.hs where
+module Test where
 
-import Capture.hs
-import Parser.hs
+import           Main
+import           Capture
+import           Parser
+import qualified Data.ByteString.Char8 as C
+import           System.IO
 
-main :: IO ()
-main = putStrLn "Test suite not yet implemented"
+pktTimeTest :: IO ()
+pktTimeTest = do
+  contents <- getContents
+  p <- pcapParse contents
+  C.putStrLn <$> pktOrd pcapStream' p
