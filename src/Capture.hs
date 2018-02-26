@@ -6,8 +6,8 @@ import qualified Data.Vector     as V
 import qualified Network.Pcap    as P
 import           System.IO
 
-nextPacket :: FilePath -> IO ()
-nextPacket path = do
+readPkts :: FilePath -> IO ()
+readPkts path = do
   handle  <- P.openOffline path
   numPkts <- toInteger $ P.statsReceived $ P.statistics handle
   packets <- P.dispatch handle -1 marshallPkts
@@ -20,10 +20,10 @@ nextPacket path = do
          *> putStrLn (packetsRead ++ "could not be processed.")
          *> ()
 
--- | should be of type `P.Callback` which returns `IO ()` 
-marshallPkts :: P.Callback -> Vector (ByteString)
+-- | should be of type `P.Callback` which returns `IO ()` rather than IO (Vector (ByteString)) 
+marshallPkts :: P.Callback
 marshallPkts pkt = do
   bs <- snd $ curry . P.toBS pkt
   fmap (\bs -> go V.empty bs) bs where
-    go v BS.empty = return liftIO v
+    go v BS.empty = return v
     go v bs = V.cons bs v

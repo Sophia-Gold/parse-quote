@@ -22,7 +22,7 @@ library:
 
 executables:
   Kospi200-exe:
-    main:                Main.hs
+    main:                Quotes.hs
     source-dirs:         app
     ghc-options:
     - -threaded
@@ -33,7 +33,7 @@ executables:
 
 tests:
   Kospi200-test:
-    main:                Spec.hs
+    main:                Test.hs
     source-dirs:         test
     ghc-options:
     - -threaded
