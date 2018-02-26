@@ -11,7 +11,7 @@ type Bids = (Double, Double, Double, Double, Double)
 type Asks = (Double, Double, Double, Double, Double)
 
 data Packet = Packet {
-  , pktTime :: PktTime
+    pktTime :: PktTime
   , acceptTime :: AcceptTime
   , issueCode :: IssueCode
   , bids :: Bids

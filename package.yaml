@@ -16,13 +16,16 @@ dependencies:
 - attoparsec
 - bytestring
 - pcap
+- text
+- time
+- vector
 
 library:
   source-dirs: src
 
 executables:
   Kospi200-exe:
-    main:                Quotes.hs
+    main:                ParseQuote.hs
     source-dirs:         app
     ghc-options:
     - -threaded

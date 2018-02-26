@@ -2,28 +2,30 @@ module Capture where
 
 import           Capture.Types
 import qualified Data.ByteString as BS
+import           Data.Char (intToDigit)
 import qualified Data.Vector     as V
-import qualified Network.Pcap    as P
-import           System.IO
+import           Network.Pcap    as P
+import           System.IO (FilePath)
 
 readPkts :: FilePath -> IO ()
 readPkts path = do
-  handle  <- P.openOffline path
-  numPkts <- toInteger $ P.statsReceived $ P.statistics handle
-  packets <- P.dispatch handle -1 marshallPkts
-    let packetsRead = numPkts - packets
+  handle  <- openOffline path
+  packets <- dispatch handle (negate 1) marshallPkts
+  stats   <- statistics handle
+  let numPkts     = statReceived stats
+      packetsRead = (fromIntegral $ toInteger numPkts) - packets 
+      msg         = intToDigit packets : " packets processed from dump file."
   case packetsRead of
-    0 -> putStrLn (packets ++ "packets processed from dump file.")
-         *> ()
+    0 -> putStrLn msg
            
-    _ -> putStrLn (packets ++ "packets processed from dump file.")
-         *> putStrLn (packetsRead ++ "could not be processed.")
-         *> ()
+    _ -> putStrLn msg
+         *> putStrLn (intToDigit packetsRead : " packets could not be processed.")
 
 -- | should be of type `P.Callback` which returns `IO ()` rather than IO (Vector (ByteString)) 
-marshallPkts :: P.Callback
-marshallPkts pkt = do
-  bs <- snd $ curry . P.toBS pkt
-  fmap (\bs -> go V.empty bs) bs where
-    go v BS.empty = return v
-    go v bs = V.cons bs v
+marshallPkts :: Callback
+marshallPkts = \pkt -> do
+  let bs = (curry toBS) pkt
+  return (putStrLn " ")
+  -- fmap (\bs -> go V.empty bs) (snd bs) where
+  --   go v empty = v
+  --   go v bs = V.cons bs v

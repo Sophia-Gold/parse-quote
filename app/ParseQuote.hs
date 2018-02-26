@@ -1,6 +1,4 @@
-{-# LANGUAGE OverloadedStrings #-}
-
-module ParseQuote where
+module Main where
 
 import           Capture
 import           Capture.Types
@@ -8,7 +6,7 @@ import           Parser
 import           Parser.Types
 import qualified Data.ByteString.Char8 as C
 import           Data.List (sortOn)
-import           Date.Time.Clock
+import           Data.Time.Clock
 import           System.Environment
 
 -- -- n is length of stream in seconds
@@ -22,17 +20,17 @@ import           System.Environment
 -- pcapStream' :: [Packet]
 -- pcapStream' = pcapStream 30
 
-acceptOrd :: [Packet] -> [Packet]
-acceptOrd p = sortOn (acceptTime p) p
+-- acceptOrd :: [Packet] -> [Packet]
+-- acceptOrd p = sortOn (acceptTime p) p
 
-pktOrd :: [Packet] -> [Packet]
-pktOrd p = sortOn (pktTime p) p
+-- pktOrd :: [Packet] -> [Packet]
+-- pktOrd p = sortOn (pktTime p) p
 
 main :: IO ()
 main = do
   args <- getArgs
   case head args of
-    "-r" -> C.putStrLn <$> readPkts $ args !! 1 
-    _    -> C.putStrLn <$> readPkts $ args !! 0
+    "-r" -> readPkts $ args !! 1
+    _    -> readPkts $ args !! 0
     -- "-r" -> C.putStrLn <$> acceptOrd pcapStream'
     -- _    -> C.putStrLn <$> pktOrd pcapStream'

@@ -1,0 +1,8 @@
+resolver: lts-7.24
+
+nix: {
+  enable: true
+  , packages: [libpcap]
+  }
+
+system-ghc: true
