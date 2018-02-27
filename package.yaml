@@ -15,10 +15,12 @@ dependencies:
 - base >= 4.7 && < 5
 - attoparsec
 - bytestring
+- containers
+- lens
+- mtl
 - pcap
 - text
 - time
-- vector
 
 library:
   source-dirs: src

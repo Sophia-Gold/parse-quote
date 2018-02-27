@@ -3,7 +3,6 @@ module Capture where
 import           Capture.Types
 import qualified Data.ByteString as BS
 import           Data.Char (intToDigit)
-import qualified Data.Vector     as V
 import           Network.Pcap    as P
 import           System.IO (FilePath)
 
