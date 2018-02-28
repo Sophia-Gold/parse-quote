@@ -20,17 +20,11 @@ import           System.Environment
 -- pcapStream' :: [Packet]
 -- pcapStream' = pcapStream 30
 
--- acceptOrd :: [Packet] -> [Packet]
--- acceptOrd p = sortOn (acceptTime p) p
-
--- pktOrd :: [Packet] -> [Packet]
--- pktOrd p = sortOn (pktTime p) p
-
 main :: IO ()
 main = do
   args <- getArgs
   case head args of
     "-r" -> readPkts $ args !! 1
     _    -> readPkts $ args !! 0
-    -- "-r" -> C.putStrLn <$> acceptOrd pcapStream'
-    -- _    -> C.putStrLn <$> pktOrd pcapStream'
+    -- "-r" -> C.putStrLn <$> runAcceptOrd pcapStream'
+    -- _    -> C.putStrLn <$> runPktOrd pcapStream'

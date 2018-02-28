@@ -1,6 +1,14 @@
+-- This file has been generated from package.yaml by hpack version 0.21.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 5e488e4aeef75a4b3b7afa057896129251becacbed5d23815836fbcfcb82b315
+
 name:           Kospi200
 version:        0.1.0.0
 description:    Code Sample for Tsuru Capital
+homepage:       https://github.com/sophia-gold/Kospi200#readme
+bug-reports:    https://github.com/sophia-gold/Kospi200/issues
 author:         Sophia Gold
 maintainer:     sophiagoldnyc@gmail.com
 copyright:      2018 Sophia Gold
@@ -12,7 +20,18 @@ cabal-version:  >= 1.10
 extra-source-files:
     README.md
 
+source-repository head
+  type: git
+  location: https://github.com/sophia-gold/Kospi200
+
 library
+  exposed-modules:
+      Capture
+      Capture.Types
+      Parser
+      Parser.Types
+  other-modules:
+      Paths_Kospi200
   hs-source-dirs:
       src
   build-depends:
@@ -22,18 +41,15 @@ library
     , containers
     , lens
     , mtl
-    , pcap 
+    , pcap
     , text
     , time
-  exposed-modules:
-      Capture
-      Capture.Types
-      Parser
-      Parser.Types
   default-language: Haskell2010
 
 executable Kospi200-exe
   main-is: ParseQuote.hs
+  other-modules:
+      Paths_Kospi200
   hs-source-dirs:
       app
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
@@ -47,10 +63,7 @@ executable Kospi200-exe
     , mtl
     , pcap
     , text
-    , time 
-  other-modules:
-      ParseQuote
-      Paths_Kospi200
+    , time
   default-language: Haskell2010
 
 test-suite Kospi200-test
@@ -65,8 +78,11 @@ test-suite Kospi200-test
       Kospi200
     , attoparsec
     , base >=4.7 && <5
-    , bytestring 
+    , bytestring
+    , containers
+    , lens
     , mtl
+    , pcap
     , text
-    , time 
+    , time
   default-language: Haskell2010
