@@ -1,17 +1,21 @@
 module Parser.Types where
 
 import Data.ByteString (ByteString)
-import Data.Time.Clock (UTCTime)
+import Data.Time.Clock (DiffTime)
 
-type PktTime = UTCTime
-
-type AcceptTime = UTCTime
+type PktTime = DiffTime
+type AcceptTime = DiffTime
 
 type IssueCode = ByteString
 
-type Bids = (Double, Double, Double, Double, Double)
+type BidPrices = (Int, Int, Int, Int, Int)
+type BidQuants = (Int, Int, Int, Int, Int)
 
-type Asks = (Double, Double, Double, Double, Double)
+type AskPrices = (Int, Int, Int, Int, Int)
+type AskQuants = (Int, Int, Int, Int, Int)
+
+type Bids = (BidQuants, BidPrices)
+type Asks = (AskQuants, AskPrices)
 
 data Packet = Packet {
     pktTime :: PktTime

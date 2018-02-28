@@ -26,8 +26,13 @@ readPkts path buf = do
 
 marshallPkts :: QuoteBuffer -> Callback
 marshallPkts buf = \pkt -> do
-  enqueueAcceptOrd ((curry toBS) pkt) buf
-  enqueuePktOrd ((curry toBS) pkt) buf
+  enqueueAcceptOrd pkt buf
+  enqueuePktOrd pkt buf
+  -- parsePkt :: (ByteString -> Packet)
+  -- let parsedPkt = parsePkt ((curry toBS) pkt)
+  -- _ <- enqueueAcceptOrd parsedPkt buf
+  -- _ <- enqueuePktOrd parsedPkt buf
+  return ()
 
 enqueueAcceptOrd :: Packet -> QuoteBuffer -> QuoteBuffer
 enqueueAcceptOrd  pkt buf = do

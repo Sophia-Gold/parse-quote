@@ -1,6 +1,5 @@
 name:                Kospi200
 version:             0.1.0.0
-github:              "sophia-gold/Kospi200"
 license:             BSD3
 author:              "Sophia Gold"
 maintainer:          "sophiagoldnyc@gmail.com"
@@ -16,6 +15,7 @@ dependencies:
 - attoparsec
 - bytestring
 - containers
+- criterion
 - lens
 - mtl
 - pcap
