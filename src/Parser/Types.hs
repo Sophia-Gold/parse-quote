@@ -8,11 +8,11 @@ type AcceptTime = DiffTime
 
 type IssueCode = ByteString
 
-type BidPrices = (Int, Int, Int, Int, Int)
-type BidQuants = (Int, Int, Int, Int, Int)
+type BidPrices = (Int32, Int32, Int32, Int32, Int32)
+type BidQuants = (Int32, Int32, Int32, Int32, Int32)
 
-type AskPrices = (Int, Int, Int, Int, Int)
-type AskQuants = (Int, Int, Int, Int, Int)
+type AskPrices = (Int32, Int32, Int32, Int32, Int32)
+type AskQuants = (Int32, Int32, Int32, Int32, Int32)
 
 type Bids = (BidQuants, BidPrices)
 type Asks = (AskQuants, AskPrices)

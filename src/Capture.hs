@@ -2,17 +2,20 @@ module Capture where
 
 import           Capture.Types
 import           Parser.Types
+import           Control.Concurrent.MVar
 import           Control.Monad.State.Lazy
 import           Data.ByteString (ByteString)
 import           Data.Char (intToDigit)
-import           Data.IntMap
-import           Data.Sequence
+import           Data.IntMap as IntMap
+import           Data.Sequence as S
 import           Network.Pcap  as P
 import           System.IO (FilePath)
 
-readPkts :: FilePath -> QuoteBuffer -> IO ()
-readPkts path buf = do
+readPkts :: FilePath -> IO ()
+readPkts path = do
   handle  <- openOffline path
+  acceptOrdBuf <- newVar IntMap.empty
+  pktOrdBuf <- newVar S.empty
   packets <- dispatch handle (negate 1) (marshallPkts buf)
   stats   <- statistics handle
   let numPkts     = statReceived stats
@@ -20,8 +23,7 @@ readPkts path buf = do
       msg         = intToDigit packets : " packets processed from dump file."
   case packetsRead of
     0 -> putStrLn msg
-           
-    _ -> putStrLn msg
+    _ -> *> putStrLn msg
          *> putStrLn (intToDigit packetsRead : " packets could not be processed.")
 
 marshallPkts :: QuoteBuffer -> Callback

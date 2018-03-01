@@ -5,20 +5,11 @@ import           Capture.Types
 import           Parser
 import           Parser.Types
 import qualified Data.ByteString.Char8 as C
+import           Data.IntMap
 import           Data.List (sortOn)
+import           Data.Sequence as S
 import           Data.Time.Clock
 import           System.Environment
-
--- -- n is length of stream in seconds
--- pcapStream :: Integer -> [Packet]
--- pcapStream s = go (getCurrentTime >>= flip $ addUTCTime $ secondToDiffTime s) getCurrentTime [] where
---   go s result = if getCurrentTime >>= (\t -> s >= t)
---                   then result
---                   else go s (nextPacket : result) -- | placeholder for `nextPacket` function
-
--- -- default to 30s
--- pcapStream' :: [Packet]
--- pcapStream' = pcapStream 30
 
 main :: IO ()
 main = do
@@ -26,5 +17,5 @@ main = do
   case head args of
     "-r" -> readPkts $ args !! 1
     _    -> readPkts $ args !! 0
-    -- "-r" -> C.putStrLn <$> runAcceptOrd pcapStream'
-    -- _    -> C.putStrLn <$> runPktOrd pcapStream'
+    -- "-r" -> C.putStrLn <$> runAcceptOrd pcapStreamAcceptTime'
+    -- _    -> C.putStrLn <$> runPktOrd pcapStreamPktTime'
