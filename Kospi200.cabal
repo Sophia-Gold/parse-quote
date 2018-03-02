@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 29d8d97f3d22566cd8af43d89def6dfd98a4340466e6cb411308ea53295df85a
+-- hash: bda863cf47b16ce0b558a9dc48e1d708ba27b69fe1c2125ae36f0a16d8eedac7
 
 name:           Kospi200
 version:        0.1.0.0
@@ -33,7 +33,6 @@ library
     , base >=4.7 && <5
     , bytestring
     , containers
-    , criterion
     , lens
     , mtl
     , pcap
@@ -54,7 +53,6 @@ executable Kospi200-exe
     , base >=4.7 && <5
     , bytestring
     , containers
-    , criterion
     , lens
     , mtl
     , pcap
@@ -66,6 +64,29 @@ test-suite Kospi200-test
   type: exitcode-stdio-1.0
   main-is: Test.hs
   other-modules:
+      Bench
+      Paths_Kospi200
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      Kospi200
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , lens
+    , mtl
+    , pcap
+    , text
+    , time
+  default-language: Haskell2010
+
+benchmark Kospi200-bench
+  type: exitcode-stdio-1.0
+  main-is: Bench.hs
+  other-modules:
+      Test
       Paths_Kospi200
   hs-source-dirs:
       test
