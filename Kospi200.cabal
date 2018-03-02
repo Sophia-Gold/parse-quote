@@ -2,13 +2,11 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 5e488e4aeef75a4b3b7afa057896129251becacbed5d23815836fbcfcb82b315
+-- hash: 29d8d97f3d22566cd8af43d89def6dfd98a4340466e6cb411308ea53295df85a
 
 name:           Kospi200
 version:        0.1.0.0
 description:    Code Sample for Tsuru Capital
-homepage:       https://github.com/sophia-gold/Kospi200#readme
-bug-reports:    https://github.com/sophia-gold/Kospi200/issues
 author:         Sophia Gold
 maintainer:     sophiagoldnyc@gmail.com
 copyright:      2018 Sophia Gold
@@ -19,10 +17,6 @@ cabal-version:  >= 1.10
 
 extra-source-files:
     README.md
-
-source-repository head
-  type: git
-  location: https://github.com/sophia-gold/Kospi200
 
 library
   exposed-modules:
@@ -39,6 +33,7 @@ library
     , base >=4.7 && <5
     , bytestring
     , containers
+    , criterion
     , lens
     , mtl
     , pcap
@@ -59,6 +54,7 @@ executable Kospi200-exe
     , base >=4.7 && <5
     , bytestring
     , containers
+    , criterion
     , lens
     , mtl
     , pcap
@@ -80,6 +76,7 @@ test-suite Kospi200-test
     , base >=4.7 && <5
     , bytestring
     , containers
+    , criterion
     , lens
     , mtl
     , pcap

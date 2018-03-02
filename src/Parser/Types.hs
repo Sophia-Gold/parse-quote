@@ -1,6 +1,7 @@
 module Parser.Types where
 
-import Data.ByteString (ByteString)
+import Data.ByteString.Char8 (ByteString)
+import Data.Int (Int32)
 import Data.Time.Clock (DiffTime)
 
 type PktTime = DiffTime
@@ -18,9 +19,7 @@ type Bids = (BidQuants, BidPrices)
 type Asks = (AskQuants, AskPrices)
 
 data Packet = Packet {
-    pktTime :: PktTime
-  , acceptTime :: AcceptTime
-  , issueCode :: IssueCode
+    issueCode :: IssueCode
   , bids :: Bids
   , asks :: Asks
   } deriving (Show)
