@@ -3,10 +3,11 @@
 module Parser where
 
 import           Parser.Types
+import           Prelude hiding (take)
+import           Control.Applicative
 import           Control.Lens.Each (each)
 import           Control.Lens.Operators
 import           Control.Lens.Traversal (partsOf)
-import           Prelude hiding (take)
 import           Data.Attoparsec (parseOnly, Parser)
 import           Data.Attoparsec.ByteString.Char8
 import           Data.Bifunctor (second)
@@ -16,20 +17,48 @@ import           Data.Char (digitToInt)
 import           Data.Int (Int32)
 import           Data.Time.Clock (picosecondsToDiffTime)
 
+-- parsePkt :: ByteString -> Either String (AcceptTime, Packet)
+-- parsePkt bs = case parse (skipMany1 "B6034" *> parseICode) bs of
+--   Fail _ _ _  -> Left "Failed parsing issue code."
+--   Partial _   -> Left "Failed parsing issue code." 
+--   Done rest i -> case parse (take 7 *> parseBids) rest of
+--     Fail _ _ _  -> Left "Failed parsing bid quotes."
+--     Partial _   -> Left "Failed parsing bid quotes."
+--     Done rest b -> case parse (take 7 *> parseAsks) rest of
+--       Fail _ _ _  -> Left "Failed parsing ask quotes."
+--       Partial _   -> Left "Failed parsing ask quotes."
+--       Done rest a -> case parse (take 50 *> parseAcceptTime) rest of
+--         Fail _ _ _  -> Left "Failed parsing accept time."
+--         Partial _   -> Left "Failed parsing accept time."
+--         Done _ at   -> Right (at, Packet i b a)
+
 parsePkt :: ByteString -> Either String (AcceptTime, Packet)
-parsePkt bs = case parse (skipMany1 "B6034" *> parseICode) bs of
-  Fail _ _ _  -> Left "Failed parsing issue code."
-  Partial _   -> Left "Failed parsing issue code." 
-  Done rest i -> case parse (take 7 *> parseBids) rest of
-    Fail _ _ _  -> Left "Failed parsing bid quotes."
-    Partial _   -> Left "Failed parsing bid quotes."
-    Done rest b -> case parse (take 7 *> parseAsks) rest of
-      Fail _ _ _  -> Left "Failed parsing ask quotes."
-      Partial _   -> Left "Failed parsing ask quotes."
-      Done rest a -> case parse (take 50 *> parseAcceptTime) rest of
-        Fail _ _ _  -> Left "Failed parsing accept time."
-        Partial _   -> Left "Failed parsing accept time."
-        Done _ at   -> Right (at, Packet i b a)
+parsePkt bs =
+  case parse p bs of
+    Left _  -> "Failed parsing packet."
+    Right r -> return r 
+  where
+    p = do
+      "B6034"
+      i <- parseICode
+      take 12
+      b <- parseBids
+      take 7
+      a <- parseAsks
+      take 50
+        at <- parseAccepTime
+      (at, Packet i b a)
+  
+parsePkt :: ByteString -> Either String (AcceptTime, Packet)
+parsePkt bs = do
+  let p = Packet <**> ((,) <$>
+                       "B6034" *> parseICode
+                       <*> take 12 *> parseBids
+                       <*> take 7 *> parseAsks
+                       <*> take 50 *> parseAccepTime)
+  case parseOnly p bs of
+    Left _  -> "Failed parsing packet."
+    Right r -> return r
 
 parseICode :: ByteString -> Either String (ByteString, IssueCode)
 parseICode = \bs ->
