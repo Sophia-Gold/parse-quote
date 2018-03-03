@@ -18,6 +18,7 @@ dependencies:
 - lens
 - mtl
 - pcap
+- split
 - text
 - time
 
