@@ -13,8 +13,15 @@ import           System.Environment (getArgs)
 main :: IO ()
 main = do
   args <- getArgs
-  acceptOrdBuf <- newMVar Map.empty
-  pktOrderBuf  <- newMVar S.empty
   case head args of
-    "-r" -> readPkts (args !! 1) acceptOrdBuf *> BS.putStrLn <$> readMVar acceptOrdBuf
-    _    -> readPkts (args !! 0) pktOrderBuf  *> BS.putStrLn <$> readMVar pktOrderBuf
+    "-r" -> do
+      acceptOrdBuf <- newMVar Map.empty
+      readPkts (args !! 1) (enqueueAcceptOrd acceptOrdBuf)
+      acceptOrdBuf' <- readMVar acceptOrdBuf
+      putStrLn $ show $ acceptOrdBuf'
+      return ()
+    _    -> do
+      pktOrderBuf <- newMVar S.empty
+      readPkts (args !! 0) (enqueuePktOrd pktOrderBuf)
+      pktOrderBuf' <- readMVar pktOrderBuf
+      putStrLn $ show $ pktOrderBuf'

@@ -13,10 +13,10 @@ import Data.Time.Clock (picosecondsToDiffTime)
 import Network.Pcap
 import System.IO (FilePath)
 
-readPkts :: FilePath -> MVar a -> IO ()
-readPkts path buf = do
+readPkts :: FilePath -> CallbackBS -> IO ()
+readPkts path callback = do
   handle  <- openOffline path
-  packets <- dispatchBS handle (negate 1) (marshallPkts buf)
+  packets <- dispatchBS handle (negate 1) callback
   stats   <- statistics handle
   let numPkts     = statReceived stats
       packetsRead = (fromIntegral $ toInteger numPkts) - packets 
@@ -25,29 +25,35 @@ readPkts path buf = do
     0 -> putStrLn msg
     _ -> putStrLn msg *> putStrLn (intToDigit packetsRead : " packets could not be processed.")
 
-marshallPkts :: MVar a -> CallbackBS
-marshallPkts buf = \hdr pkt -> do
-  buf' <- readMVar buf
+-- marshallPkts :: MVar a -> CallbackBS
+-- marshallPkts buf = \hdr pkt -> do
+--   buf' <- readMVar buf
+--   case parsePkt pkt of
+--     Left err -> putStrLn err
+--     Right (at, p) -> case dataTypeName $ dataTypeOf $ buf' of
+--       "Data.Sequence.Seq"  -> enqueueAcceptOrd at p buf
+--       "Data.Map.Map"       -> enqueuePktOrd p buf
+
+enqueueAcceptOrd :: AcceptTimeBuffer -> CallbackBS
+enqueueAcceptOrd buf = \hdr pkt ->
   case parsePkt pkt of
     Left err -> putStrLn err
-    Right (at, p) -> case dataTypeName $ dataTypeOf $ buf' of
-      "Data.Sequence.Seq"  -> enqueueAcceptOrd at p buf
-      "Data.Map.Map"       -> enqueuePktOrd p buf
+    Right (t, p) -> do
+      oldAcceptBuf <- readMVar buf
+      newAcceptBuf <- putMVar buf (insert t p oldAcceptBuf)
+      return ()
 
-enqueueAcceptOrd :: AcceptTime -> Packet -> AcceptTimeBuffer -> IO ()
-enqueueAcceptOrd t pkt buf = do
-  oldAcceptBuf <- readMVar buf
-  newAcceptBuf <- putMVar buf (insert t pkt oldAcceptBuf)
-  return ()
-
-enqueuePktOrd :: Packet -> PktTimeBuffer -> IO ()
-enqueuePktOrd pkt buf = do
+enqueuePktOrd :: PktTimeBuffer -> CallbackBS
+enqueuePktOrd buf = \hdr pkt ->
   -- | prepend to Seq in parsing order or use IntMap keyed on header timestamp in microseconds?
   -- let t = (toInteger $ digitToInt $ hdrSeconds hdr)^6
   --       + (toInteger $ digitToInt $ hdrUSeconds hdr) in
-  oldPktBuf <- readMVar buf
-  newPktBuf <- putMVar buf (pkt <| oldPktBuf)
-  return ()
+  case parsePkt pkt of
+    Left err -> putStrLn err
+    Right (t, p) -> do
+      oldPktBuf <- readMVar buf
+      newPktBuf <- putMVar buf (p <| oldPktBuf)
+      return ()
   
 dequeueAcceptOrd :: AcceptTimeBuffer -> IO (Maybe Packet)
 dequeueAcceptOrd buf = do
