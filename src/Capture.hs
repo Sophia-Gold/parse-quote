@@ -25,15 +25,6 @@ readPkts path callback = do
     0 -> putStrLn msg
     _ -> putStrLn msg *> putStrLn (intToDigit packetsRead : " packets could not be processed.")
 
--- marshallPkts :: MVar a -> CallbackBS
--- marshallPkts buf = \hdr pkt -> do
---   buf' <- readMVar buf
---   case parsePkt pkt of
---     Left err -> putStrLn err
---     Right (at, p) -> case dataTypeName $ dataTypeOf $ buf' of
---       "Data.Sequence.Seq"  -> enqueueAcceptOrd at p buf
---       "Data.Map.Map"       -> enqueuePktOrd p buf
-
 enqueueAcceptOrd :: AcceptTimeBuffer -> CallbackBS
 enqueueAcceptOrd buf = \hdr pkt ->
   case parsePkt pkt of

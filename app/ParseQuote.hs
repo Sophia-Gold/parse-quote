@@ -19,9 +19,9 @@ main = do
       readPkts (args !! 1) (enqueueAcceptOrd acceptOrdBuf)
       acceptOrdBuf' <- readMVar acceptOrdBuf
       putStrLn $ show $ acceptOrdBuf'
-      return ()
     _    -> do
       pktOrderBuf <- newMVar S.empty
       readPkts (args !! 0) (enqueuePktOrd pktOrderBuf)
       pktOrderBuf' <- readMVar pktOrderBuf
       putStrLn $ show $ pktOrderBuf'
+      

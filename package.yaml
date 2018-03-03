@@ -44,6 +44,7 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - Kospi200
+    - test-framework
 
 benchmarks:
   Kospi200-bench:
@@ -56,3 +57,4 @@ benchmarks:
     dependencies:
     - Kospi200
     - criterion
+    - test-framework

@@ -2,24 +2,38 @@
 
 module Bench where
 
-import           Main
 import           Capture
 import           Parser
-import           Control.Monad.State.Lazy (execState)
+import           Control.Concurrent.MVar
 import           Criterion (bench, whnf)
+import           Data.ByteString.Char8 (ByteString)
+import qualified Data.Map.Strict as Map (empty)
+import qualified Data.Sequence as S (empty)
+import           Test.Framework (defaultMain)
 
-quoteAcceptOrdTime :: String
+main :: IO ()
+main = defaultMain
+  [ quoteAcceptOrdTime
+  , quotePktOrderTime
+  , parsePktTime
+  ]
+
+quoteAcceptOrdTime :: IO String
 quoteAcceptOrdTime = do
-  buf <- readPkts "mdf-kospi200.20110216-0.pcap" 
-  show $ bench "accept time order" (whnf $ execState buf)
+  acceptOrdBuf <- newMVar Map.empty
+  readPkts "mdf-kospi200.20110216-0.pcap" (enqueueAcceptOrd acceptOrdBuf)
+  acceptOrdBuf' <- readMVar acceptOrdBuf 
+  show $ bench "accept time order" (whnf acceptOrdBuf')
 
-quotePktOrder :: String
+quotePktOrder :: IO String
 quotePktOrder = do
-  buf <- readPkts "mdf-kospi200.20110216-0.pcap"
-  show $ bench "packet order" (whnf $ execState buf)
+  pktOrderBuf <- newMVar S.empty
+  dump <- readPkts "mdf-kospi200.20110216-0.pcap" (enqueuePktOrd pktOrderBuf)
+  pktOrderBuf' <- readMVar pktOrderBuf
+  show $ bench "packet order" (whnf pktOrderBuf')
 
 parsePktTime :: String
-parsePktTime = do
+parsePktTime =
   let input = ("B6034KR4301F3250500940000679900096000030800095000009400094000023100093000019900092000013400077890009700002340009800001300009900002820010000004150010100000520039700120007000800160009004590011001400170027000709002997"
-               :: C.ByteString)
-  show $ bench "parser" (whnf $ parsePkt input)
+               :: ByteString)
+  in show $ bench "parser" (whnf $ parsePkt input)
