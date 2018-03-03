@@ -24,11 +24,11 @@ import           System.IO (FilePath)
 --     0 -> putStrLn msg
 --     _ -> putStrLn msg *> putStrLn (intToDigit packetsRead : " packets could not be processed.")
 
--- | should only take one type of buffer
+-- -- | should only take one type of buffer
 -- marshallPkts :: AcceptTimeBuffer -> PktTimeBuffer -> CallbackBS
 -- marshallPkts acceptOrdBuf pktOrdBuf = \pkt -> do
---   _ <- enqueueAcceptOrd (snd pkt) acceptOrdBuf
---   _ <- enqueuePktOrd (snd pkt) pktOrdBuf
+--   enqueueAcceptOrd (parsePkt $ snd pkt) acceptOrdBuf
+--   enqueuePktOrd (parsePkt $ snd pkt) pktOrdBuf
 --   return ()
 
 -- enqueueAcceptOrd :: Packet -> AcceptTimeBuffer -> IO AcceptTimeBuffer
