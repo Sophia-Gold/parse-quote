@@ -16,10 +16,8 @@ dependencies:
 - bytestring
 - containers
 - lens
-- mtl
 - pcap
 - split
-- text
 - time
 
 library:

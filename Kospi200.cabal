@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 013f3fdab776917a03626cb72c9e8054357d75788b64f3e1103fa1e24cf638cf
+-- hash: 805c7cadf907c767beb909fe04ca9eafdd0729a142603f46b816588baf0e3204
 
 name:           Kospi200
 version:        0.1.0.0
@@ -34,10 +34,8 @@ library
     , bytestring
     , containers
     , lens
-    , mtl
     , pcap
     , split
-    , text
     , time
   default-language: Haskell2010
 
@@ -55,10 +53,8 @@ executable Kospi200-exe
     , bytestring
     , containers
     , lens
-    , mtl
     , pcap
     , split
-    , text
     , time
   default-language: Haskell2010
 
@@ -78,10 +74,8 @@ test-suite Kospi200-test
     , bytestring
     , containers
     , lens
-    , mtl
     , pcap
     , split
-    , text
     , time
   default-language: Haskell2010
 
@@ -102,9 +96,7 @@ benchmark Kospi200-bench
     , containers
     , criterion
     , lens
-    , mtl
     , pcap
     , split
-    , text
     , time
   default-language: Haskell2010
