@@ -8,8 +8,8 @@ type AcceptTime = DiffTime
 
 type IssueCode = ByteString
 
-type Prices = (Int, Int, Int, Int)
-type Quants = (Int, Int, Int, Int)
+type Prices = (Int, Int, Int, Int, Int)
+type Quants = (Int, Int, Int, Int, Int)
 type Quotes = (Quants, Prices)
 
 data Packet = Packet {

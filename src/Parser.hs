@@ -18,12 +18,12 @@ import           Data.Time.Clock (picosecondsToDiffTime)
 
 parsePkt :: ByteString -> Either String (AcceptTime, Packet)
 parsePkt bs = do
-  let p = Packet <$> ("B6034" *> P.take 12)
-                 <*> (P.take 7 *> parseQuotes)
+  let p = Packet <$> (P.manyTill P.anyChar "B6034" *> P.take 12)
                  <*> (P.take 12 *> parseQuotes)
+                 <*> (P.take 7 *> parseQuotes)
                  <**> ((,) <$> (P.take 50 *> parseAcceptTime))
   case P.parseOnly p bs of
-    Left _  -> Left "Failed parsing packet."
+    Left _  -> Left "Wrong data and/or information type."
     Right r -> Right r
       
 parseQuotes :: Parser Quotes
@@ -31,7 +31,7 @@ parseQuotes = let toInt = fst . fromMaybe (0, "") . BS.readInt
                   p = P.count 5 $ (,) <$> (toInt <$> P.take 5)
                                       <*> (toInt <$> P.take 7)
                   flatten  = concat . (\p -> (\(a, b) -> [a, b]) <$> p)
-                  toTuple  = \p -> undefined & partsOf each .~ p :: (Int, Int, Int, Int)
+                  toTuple  = \p -> undefined & partsOf each .~ p :: (Int, Int, Int, Int, Int)
                   toQuotes = \p -> (\l -> (toTuple $ head l, toTuple $ head $ tail l)) $ transpose $ chunksOf 2 p
               in toQuotes <$> flatten <$> p
 

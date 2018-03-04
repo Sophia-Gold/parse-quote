@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 22b3e49787ff7494d7aab2bf4184ad020019f83801ca73cfc7ddcd07f49503b5
+-- hash: 69e57fe20fec1d94913e56a14f82552e7b87d131f9c5f80ee9b36abcacbc7bb1
 
 name:           Kospi200
 version:        0.1.0.0
@@ -76,7 +76,8 @@ test-suite parse-quote-test
     , lens
     , pcap
     , split
-    , test-framework
+    , tasty
+    , tasty-hunit
     , time
   default-language: Haskell2010
 
@@ -99,6 +100,6 @@ benchmark parse-quote-bench
     , lens
     , pcap
     , split
-    , test-framework
+    , tasty
     , time
   default-language: Haskell2010
