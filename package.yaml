@@ -24,7 +24,7 @@ library:
   source-dirs: src
 
 executables:
-  Kospi200-exe:
+  parse-quote:
     main:                ParseQuote.hs
     source-dirs:         app
     ghc-options:
@@ -35,7 +35,7 @@ executables:
     - Kospi200
 
 tests:
-  Kospi200-test:
+  parse-quote-test:
     main:                Test.hs
     source-dirs:         test
     ghc-options:
@@ -44,10 +44,11 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - Kospi200
-    - test-framework
+    - tasty
+    - tasty-hunit
 
 benchmarks:
-  Kospi200-bench:
+  parse-quote-bench:
     main:                Bench.hs
     source-dirs:         test
     ghc-options:
@@ -57,4 +58,4 @@ benchmarks:
     dependencies:
     - Kospi200
     - criterion
-    - test-framework
+    - tasty

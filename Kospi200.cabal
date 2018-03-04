@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 3c3515fb0de3dbac020982ab2d57b74e47a31450f7e288613bc24b3c67f325cd
+-- hash: 22b3e49787ff7494d7aab2bf4184ad020019f83801ca73cfc7ddcd07f49503b5
 
 name:           Kospi200
 version:        0.1.0.0
@@ -39,7 +39,7 @@ library
     , time
   default-language: Haskell2010
 
-executable Kospi200-exe
+executable parse-quote
   main-is: ParseQuote.hs
   other-modules:
       Paths_Kospi200
@@ -58,7 +58,7 @@ executable Kospi200-exe
     , time
   default-language: Haskell2010
 
-test-suite Kospi200-test
+test-suite parse-quote-test
   type: exitcode-stdio-1.0
   main-is: Test.hs
   other-modules:
@@ -80,7 +80,7 @@ test-suite Kospi200-test
     , time
   default-language: Haskell2010
 
-benchmark Kospi200-bench
+benchmark parse-quote-bench
   type: exitcode-stdio-1.0
   main-is: Bench.hs
   other-modules:
