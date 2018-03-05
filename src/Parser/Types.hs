@@ -9,6 +9,7 @@ import TextShow.TH
 
 type PktTime = DiffTime
 type AcceptTime = DiffTime
+$(deriveTextShow ''DiffTime)
 
 data Quote = Quote {
     quantity :: Int

@@ -6,7 +6,7 @@ import Capture.Types
 import Control.Concurrent.MVar
 import Data.ByteString.Char8 (ByteString)
 import Data.Map.Strict (Map, insert, minViewWithKey)
-import Data.Sequence (Seq, ViewR (..), viewr, (<|))
+-- import Data.Sequence (Seq, ViewR (..), viewr, (<|))
 import Data.Time.Clock (picosecondsToDiffTime)
 import Network.Pcap
 import System.IO (FilePath)
@@ -34,26 +34,25 @@ enqueueAcceptOrd buf = \hdr pkt ->
       
 enqueuePktOrd :: PktTimeBuffer -> CallbackBS
 enqueuePktOrd buf = \hdr pkt ->
-  -- | prepend to Seq in parsing order or use IntMap keyed on header timestamp in microseconds?
-  -- let t = (toInteger $ digitToInt $ hdrSeconds hdr)^6
-  --       + (toInteger $ digitToInt $ hdrUSeconds hdr) in
+  let pt = picosecondsToDiffTime $ (fromIntegral $ hdrSeconds hdr)^12
+                                 + (fromIntegral $ hdrUseconds hdr)^6 in
   case parsePkt pkt of
     Left err -> putStrLn err
     Right (t, p) -> do
       oldPktBuf <- takeMVar buf
-      newPktBuf <- putMVar buf (p <| oldPktBuf)
+      newPktBuf <- putMVar buf (insert pt p oldPktBuf)
       return ()
   
-dequeueAcceptOrd :: AcceptTimeBuffer -> IO (Maybe Packet)
-dequeueAcceptOrd buf = do
-  oldBuf <- takeMVar buf 
-  case minViewWithKey oldBuf of
-    Just ((k, v), m) -> putMVar buf m *> pure (Just v)
-    _                -> pure Nothing
+-- dequeueAcceptOrd :: AcceptTimeBuffer -> IO (Maybe Packet)
+-- dequeueAcceptOrd buf = do
+--   oldBuf <- takeMVar buf 
+--   case minViewWithKey oldBuf of
+--     Just ((k, v), m) -> putMVar buf m *> pure (Just v)
+--     _                -> pure Nothing
     
-dequeuePktOrd :: PktTimeBuffer -> IO (Maybe Packet)
-dequeuePktOrd buf = do
-  oldBuf <- takeMVar buf 
-  case viewr oldBuf of
-    s :> a -> putMVar buf s *> pure (Just a)
-    EmptyR -> pure Nothing
+-- dequeuePktOrd :: PktTimeBuffer -> IO (Maybe Packet)
+-- dequeuePktOrd buf = do
+--   oldBuf <- takeMVar buf 
+--   case viewr oldBuf of
+--     s :> a -> putMVar buf s *> pure (Just a)
+--     EmptyR -> pure Nothing
