@@ -7,6 +7,7 @@ import           Data.Foldable (toList)
 import qualified Data.Map.Strict as Map (empty)
 import qualified Data.Sequence as S (empty)
 import           System.Environment (getArgs)
+import           TextShow (printT)
 
 main :: IO ()
 main = do
@@ -16,9 +17,9 @@ main = do
       buf <- newMVar Map.empty
       readPkts (args !! 1) (enqueueAcceptOrd buf)
       buf <- takeMVar buf
-      sequence_ $ print <$> (toList $ buf)
+      sequence_ $ printT <$> (toList $ buf)
     _    -> do
       buf <- newMVar S.empty
       readPkts (args !! 0) (enqueuePktOrd buf)
       buf <- takeMVar buf
-      sequence_ $ print <$> (toList $ buf)
+      sequence_ $ printT <$> (toList $ buf)

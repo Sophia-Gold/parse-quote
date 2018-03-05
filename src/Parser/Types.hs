@@ -1,19 +1,27 @@
+{-# LANGUAGE TemplateHaskell #-}
+
 module Parser.Types where
 
 import Data.ByteString.Char8 (ByteString)
 import Data.Time.Clock (DiffTime)
+import TextShow.Data.ByteString
+import TextShow.TH
 
 type PktTime = DiffTime
 type AcceptTime = DiffTime
 
-type IssueCode = ByteString
+data Quote = Quote {
+    quantity :: Int
+  , price :: Int
+  }
+$(deriveTextShow ''Quote)
 
-type Prices = (Int, Int, Int, Int, Int)
-type Quants = (Int, Int, Int, Int, Int)
-type Quotes = (Quants, Prices)
+type Bids = (Quote, Quote, Quote, Quote, Quote)
+type Asks = (Quote, Quote, Quote, Quote, Quote)
 
 data Packet = Packet {
-    issueCode :: IssueCode
-  , bids :: Quotes
-  , asks :: Quotes
-  } deriving (Show)
+    issue_code :: ByteString
+  , bids :: Bids
+  , asks :: Asks
+  }
+$(deriveTextShow ''Packet)

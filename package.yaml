@@ -15,9 +15,8 @@ dependencies:
 - attoparsec
 - bytestring
 - containers
-- lens
 - pcap
-- split
+- text-show
 - time
 
 library:
