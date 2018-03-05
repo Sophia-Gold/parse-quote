@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 157be5cd5a8b4f15e0a223e23d149ec72b81ac22e6dde59a0303ab3a648a6534
+-- hash: cf11aa79443429b8d38a66edcd7f257e2b3e9cfe899dc64a6ef061328ddeb435
 
 name:           Kospi200
 version:        0.1.0.0
@@ -27,7 +27,7 @@ library
   other-modules:
       Paths_Kospi200
   hs-source-dirs:
-      src
+      src/
   build-depends:
       attoparsec
     , base >=4.7 && <5
@@ -95,7 +95,7 @@ benchmark parse-quote-bench
     , containers
     , criterion
     , pcap
-    , tasty
+    , text
     , text-show
     , time
   default-language: Haskell2010

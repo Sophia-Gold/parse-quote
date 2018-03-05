@@ -20,7 +20,8 @@ dependencies:
 - time
 
 library:
-  source-dirs: src
+  source-dirs:
+  - src/  
 
 executables:
   parse-quote:
@@ -57,4 +58,4 @@ benchmarks:
     dependencies:
     - Kospi200
     - criterion
-    - tasty
+    - text
