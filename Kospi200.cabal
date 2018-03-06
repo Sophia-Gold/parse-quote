@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: bec4910b313078fdd32fbbd2d894888cbb8f941d38bd3644ba917d63232a6f14
+-- hash: 5fe27c25efc421de8b274fac02a779d4222ab6fbe48cb5f4640bfa2e6fae554b
 
 name:           Kospi200
 version:        0.1.0.0
@@ -29,8 +29,7 @@ library
   hs-source-dirs:
       src/
   build-depends:
-      async-timer
-    , attoparsec
+      attoparsec
     , base >=4.9 && <5
     , bytestring
     , containers
@@ -46,10 +45,9 @@ executable parse-quote
       Paths_Kospi200
   hs-source-dirs:
       app
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -O2
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N4 -with-rtsopts=-IO -with-rtsopts=-A8G -O2
   build-depends:
       Kospi200
-    , async-timer
     , attoparsec
     , base >=4.9 && <5
     , bytestring
@@ -71,7 +69,6 @@ test-suite parse-quote-test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N -O2
   build-depends:
       Kospi200
-    , async-timer
     , attoparsec
     , base >=4.9 && <5
     , bytestring
@@ -95,7 +92,6 @@ benchmark parse-quote-bench
   ghc-options: -threaded -rtsopts -with-rtsopts=-N4 -with-rtsopts=-IO -with-rtsopts=-A8G -O2
   build-depends:
       Kospi200
-    , async-timer
     , attoparsec
     , base >=4.9 && <5
     , bytestring
