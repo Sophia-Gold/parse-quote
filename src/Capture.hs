@@ -42,33 +42,3 @@ enqueuePktOrd buf = \hdr pkt ->
       oldPktBuf <- takeMVar buf
       newPktBuf <- putMVar buf (insert pt (at, p) oldPktBuf)
       return ()
-
--- enqueueAcceptOrd' :: AcceptTimeBuffer' -> CallbackBS
--- enqueueAcceptOrd' buf = \hdr pkt ->
---   let pt = PktTime $ picosecondsToDiffTime $ (fromIntegral $ hdrUseconds hdr)^6 in  -- microseconds -> picoseconds
---   case parsePkt pkt of
---     Left err -> return ()
---     Right (at, p) -> do
---       modifyIORef' buf (\m -> insert at (pt, p) m)    
-      
--- enqueuePktOrd' :: PktTimeBuffer' -> CallbackBS
--- enqueuePktOrd' buf = \hdr pkt ->
---   let pt = PktTime $ picosecondsToDiffTime $ (fromIntegral $ hdrUseconds hdr)^6 in  -- microseconds -> picoseconds
---   case parsePkt pkt of
---     Left err -> return ()
---     Right (at, p) -> do 
---       modifyIORef' buf (\m -> insert pt (at, p) m) 
-  
--- dequeueAcceptOrd :: AcceptTimeBuffer -> IO (Maybe Packet)
--- dequeueAcceptOrd buf = do
---   oldBuf <- takeMVar buf 
---   case minViewWithKey oldBuf of
---     Just ((k, v), m) -> putMVar buf m *> pure (Just v)
---     _                -> pure Nothing
-    
--- dequeuePktOrd :: PktTimeBuffer -> IO (Maybe Packet)
--- dequeuePktOrd buf = do
---   oldBuf <- takeMVar buf 
---   case viewr oldBuf of
---     s :> a -> putMVar buf s *> pure (Just a)
---     EmptyR -> pure Nothing
