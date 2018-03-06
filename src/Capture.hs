@@ -5,7 +5,7 @@ import Parser.Types
 import Capture.Types
 import Control.Concurrent.MVar
 import Data.ByteString.Char8 (ByteString)
-import Data.Map.Strict (Map, insert, minViewWithKey)
+import Data.Map.Strict (insert, minViewWithKey)
 import Data.Time.Clock (picosecondsToDiffTime)
 import Network.Pcap
 import System.IO (FilePath)
@@ -25,23 +25,39 @@ readPkts path callback = do
     
 enqueueAcceptOrd :: AcceptTimeBuffer -> CallbackBS
 enqueueAcceptOrd buf = \hdr pkt ->
+  let pt = PktTime $ picosecondsToDiffTime $ (fromIntegral $ hdrUseconds hdr)^6 in  -- microseconds -> picoseconds
   case parsePkt pkt of
     Left err -> return ()
-    Right (t, p) -> do
+    Right (at, p) -> do
       oldAcceptBuf <- takeMVar buf
-      newAcceptBuf <- putMVar buf (insert t p oldAcceptBuf)
+      newAcceptBuf <- putMVar buf (insert at (pt, p) oldAcceptBuf)
       return ()
       
 enqueuePktOrd :: PktTimeBuffer -> CallbackBS
 enqueuePktOrd buf = \hdr pkt ->
-  let pt = picosecondsToDiffTime $ (fromIntegral $ hdrSeconds hdr)^12     -- seconds -> picoseconds
-                                 + (fromIntegral $ hdrUseconds hdr)^6 in  -- microseconds -> picoseconds
+  let pt = PktTime $ picosecondsToDiffTime $ (fromIntegral $ hdrUseconds hdr)^6 in  -- microseconds -> picoseconds
   case parsePkt pkt of
     Left err -> return ()
-    Right (t, p) -> do
+    Right (at, p) -> do
       oldPktBuf <- takeMVar buf
-      newPktBuf <- putMVar buf (insert pt p oldPktBuf)
+      newPktBuf <- putMVar buf (insert pt (at, p) oldPktBuf)
       return ()
+
+-- enqueueAcceptOrd' :: AcceptTimeBuffer' -> CallbackBS
+-- enqueueAcceptOrd' buf = \hdr pkt ->
+--   let pt = PktTime $ picosecondsToDiffTime $ (fromIntegral $ hdrUseconds hdr)^6 in  -- microseconds -> picoseconds
+--   case parsePkt pkt of
+--     Left err -> return ()
+--     Right (at, p) -> do
+--       modifyIORef' buf (\m -> insert at (pt, p) m)    
+      
+-- enqueuePktOrd' :: PktTimeBuffer' -> CallbackBS
+-- enqueuePktOrd' buf = \hdr pkt ->
+--   let pt = PktTime $ picosecondsToDiffTime $ (fromIntegral $ hdrUseconds hdr)^6 in  -- microseconds -> picoseconds
+--   case parsePkt pkt of
+--     Left err -> return ()
+--     Right (at, p) -> do 
+--       modifyIORef' buf (\m -> insert pt (at, p) m) 
   
 -- dequeueAcceptOrd :: AcceptTimeBuffer -> IO (Maybe Packet)
 -- dequeueAcceptOrd buf = do

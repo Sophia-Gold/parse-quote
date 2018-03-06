@@ -15,9 +15,10 @@ main = do
       buf <- newMVar Map.empty
       readPkts (args !! 1) (enqueueAcceptOrd buf)
       buf <- takeMVar buf
-      sequence_ $ printT <$> (Map.assocs $ buf)
+      sequence_ ((printT . (\(at,(pt,p)) -> (pt,at,p))) <$> Map.assocs buf)
     _    -> do
       buf <- newMVar Map.empty
       readPkts (args !! 0) (enqueuePktOrd buf)
       buf <- takeMVar buf
-      sequence_ $ printT <$> (Map.assocs buf)
+      sequence_ ((printT . (\(pt,(at,p)) -> (pt,at,p))) <$> Map.assocs buf)
+      

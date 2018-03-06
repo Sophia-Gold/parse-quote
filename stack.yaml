@@ -1,8 +1,15 @@
-resolver: lts-7.24
+resolver: lts-9.21
 
 nix: {
   enable: true
-  , packages: [libpcap]
+  , packages: [libpcap
+             , libcxx
+             , icu
+             , gcc
+             , ncurses]
   }
 
+extra-deps:
+  - pcap-0.4.5.2
+  
 system-ghc: true

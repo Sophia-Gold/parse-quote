@@ -11,12 +11,14 @@ extra-source-files:
 description: Code Sample for Tsuru Capital
 
 dependencies:
-- base >= 4.7 && < 5
+- base >= 4.9 && < 5
+- async-timer
 - attoparsec
 - bytestring
 - containers
 - pcap
 - text-show
+- text-show-instances
 - time
 
 library:
@@ -31,6 +33,7 @@ executables:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
+    - -O2
     dependencies:
     - Kospi200
 
@@ -42,6 +45,7 @@ tests:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
+    - -O2
     dependencies:
     - Kospi200
     - tasty
@@ -54,7 +58,10 @@ benchmarks:
     ghc-options:
     - -threaded
     - -rtsopts
-    - -with-rtsopts=-N
+    - -with-rtsopts=-N4
+    - -with-rtsopts=-IO
+    - -with-rtsopts=-A8G
+    - -O2
     dependencies:
     - Kospi200
     - criterion

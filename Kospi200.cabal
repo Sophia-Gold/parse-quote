@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: cf11aa79443429b8d38a66edcd7f257e2b3e9cfe899dc64a6ef061328ddeb435
+-- hash: bec4910b313078fdd32fbbd2d894888cbb8f941d38bd3644ba917d63232a6f14
 
 name:           Kospi200
 version:        0.1.0.0
@@ -29,12 +29,14 @@ library
   hs-source-dirs:
       src/
   build-depends:
-      attoparsec
-    , base >=4.7 && <5
+      async-timer
+    , attoparsec
+    , base >=4.9 && <5
     , bytestring
     , containers
     , pcap
     , text-show
+    , text-show-instances
     , time
   default-language: Haskell2010
 
@@ -44,15 +46,17 @@ executable parse-quote
       Paths_Kospi200
   hs-source-dirs:
       app
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -O2
   build-depends:
       Kospi200
+    , async-timer
     , attoparsec
-    , base >=4.7 && <5
+    , base >=4.9 && <5
     , bytestring
     , containers
     , pcap
     , text-show
+    , text-show-instances
     , time
   default-language: Haskell2010
 
@@ -64,17 +68,19 @@ test-suite parse-quote-test
       Paths_Kospi200
   hs-source-dirs:
       test
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -O2
   build-depends:
       Kospi200
+    , async-timer
     , attoparsec
-    , base >=4.7 && <5
+    , base >=4.9 && <5
     , bytestring
     , containers
     , pcap
     , tasty
     , tasty-hunit
     , text-show
+    , text-show-instances
     , time
   default-language: Haskell2010
 
@@ -86,16 +92,18 @@ benchmark parse-quote-bench
       Paths_Kospi200
   hs-source-dirs:
       test
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N4 -with-rtsopts=-IO -with-rtsopts=-A8G -O2
   build-depends:
       Kospi200
+    , async-timer
     , attoparsec
-    , base >=4.7 && <5
+    , base >=4.9 && <5
     , bytestring
     , containers
     , criterion
     , pcap
     , text
     , text-show
+    , text-show-instances
     , time
   default-language: Haskell2010

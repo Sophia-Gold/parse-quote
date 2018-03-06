@@ -39,4 +39,4 @@ parseAcceptTime :: Parser AcceptTime
 parseAcceptTime = let p = P.count 4 $ fst . fromMaybe (0, "") . BS.readInteger <$> P.take 2
                       toPico = \p -> zipWith3 (\a b c -> a^b * c) p [6, 12, 12, 12] [1, 1, 60, 3600]
                       toTime = \p -> picosecondsToDiffTime $ sum $ toPico p  -- convert to DiffTime
-                  in toTime <$> p
+                  in (AcceptTime . toTime) <$> p
