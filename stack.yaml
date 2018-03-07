@@ -2,11 +2,7 @@ resolver: lts-9.21
 
 nix: {
   enable: true
-  , packages: [libpcap
-             , libcxx
-             , icu
-             , gcc
-             , ncurses]
+  , packages: [libpcap]
   }
 
 extra-deps:
