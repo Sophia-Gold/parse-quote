@@ -28,19 +28,11 @@ enqueueAcceptOrd buf = \hdr pkt ->
   let pt = PktTime $ picosecondsToDiffTime $ (fromIntegral $ hdrUseconds hdr)^6 in  -- microseconds -> picoseconds
   case parsePkt pkt of
     Left err -> return ()
-    Right (at, p) -> do
-      -- oldAcceptBuf <- takeMVar buf
-      -- newAcceptBuf <- putMVar buf (insert at (pt, p) oldAcceptBuf)
-      newBuf <- modifyMVar_ buf (\m -> pure $ insert at (pt, p) m)
-      return ()
+    Right (at, p) -> modifyMVar_ buf (\m -> pure $ insert at (pt, p) m) 
       
 enqueuePktOrd :: PktTimeBuffer -> CallbackBS
 enqueuePktOrd buf = \hdr pkt ->
   let pt = PktTime $ picosecondsToDiffTime $ (fromIntegral $ hdrUseconds hdr)^6 in  -- microseconds -> picoseconds
   case parsePkt pkt of
     Left err -> return ()
-    Right (at, p) -> do
-      -- oldPktBuf <- takeMVar buf
-      -- newPktBuf <- putMVar buf (insert pt (at, p) oldPktBuf)
-      newBuf <- modifyMVar_ buf (\m -> pure $ insert pt (at, p) m)
-      return ()
+    Right (at, p) -> modifyMVar_ buf (\m -> pure $ insert pt (at, p) m)
