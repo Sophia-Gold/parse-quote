@@ -5,7 +5,7 @@ import Parser.Types
 import Capture.Types
 import Control.Concurrent.MVar
 import Data.ByteString.Char8 (ByteString)
-import Data.Map.Strict (insert, minViewWithKey)
+import Data.Map.Strict (insert)
 import Data.Time.Clock (picosecondsToDiffTime)
 import Network.Pcap
 import System.IO (FilePath)
@@ -29,8 +29,9 @@ enqueueAcceptOrd buf = \hdr pkt ->
   case parsePkt pkt of
     Left err -> return ()
     Right (at, p) -> do
-      oldAcceptBuf <- takeMVar buf
-      newAcceptBuf <- putMVar buf (insert at (pt, p) oldAcceptBuf)
+      -- oldAcceptBuf <- takeMVar buf
+      -- newAcceptBuf <- putMVar buf (insert at (pt, p) oldAcceptBuf)
+      newBuf <- modifyMVar_ buf (\m -> pure $ insert at (pt, p) m)
       return ()
       
 enqueuePktOrd :: PktTimeBuffer -> CallbackBS
@@ -39,6 +40,7 @@ enqueuePktOrd buf = \hdr pkt ->
   case parsePkt pkt of
     Left err -> return ()
     Right (at, p) -> do
-      oldPktBuf <- takeMVar buf
-      newPktBuf <- putMVar buf (insert pt (at, p) oldPktBuf)
+      -- oldPktBuf <- takeMVar buf
+      -- newPktBuf <- putMVar buf (insert pt (at, p) oldPktBuf)
+      newBuf <- modifyMVar_ buf (\m -> pure $ insert pt (at, p) m)
       return ()
