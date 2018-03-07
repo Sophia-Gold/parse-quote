@@ -13,8 +13,8 @@ import System.IO (FilePath)
 readPkts :: FilePath -> CallbackBS -> IO ()
 readPkts path callback = do
   handle  <- openOffline path
-  stats   <- statistics handle 
-  packets <- dispatchBS handle (- 1) callback
+  -- stats   <- statistics handle
+  packets <- dispatchBS handle (- 1) callback  -- "-1" means loop until end of file
   return ()
   -- let numPkts     = fromIntegral $ statReceived stats
   --     packetsRead = numPkts - packets

@@ -11,12 +11,12 @@ main :: IO ()
 main = do
   args <- getArgs
   case head args of
-    "-r" -> do
+    "-r" -> do   -- ordered by quote accept time
       buf <- newMVar Map.empty
       readPkts (args !! 1) (enqueueAcceptOrd buf)
       buf <- takeMVar buf
-      sequence_ ((printT . (\(at,(pt,p)) -> (pt,at,p))) <$> Map.assocs buf)
-    _    -> do
+      sequence_ ((printT . (\(at,(pt,p)) -> (pt,at,p))) <$> Map.assocs buf)  -- print packet receipt time first
+    _    -> do   -- default to ordering by packet receipt time
       buf <- newMVar Map.empty
       readPkts (args !! 0) (enqueuePktOrd buf)
       buf <- takeMVar buf
