@@ -1,6 +1,6 @@
-[1 of 2] Compiling Main             ( /run/user/1001/stack6410/pcap-0.4.5.2/Setup.lhs, /run/user/1001/stack6410/pcap-0.4.5.2/.stack-work/dist/x86_64-linux-nix/Cabal-1.24.2.0/setup/Main.o )
-[2 of 2] Compiling StackSetupShim   ( /home/sophia/.stack/setup-exe-src/setup-shim-mPHDZzAJ.hs, /run/user/1001/stack6410/pcap-0.4.5.2/.stack-work/dist/x86_64-linux-nix/Cabal-1.24.2.0/setup/StackSetupShim.o )
-Linking /run/user/1001/stack6410/pcap-0.4.5.2/.stack-work/dist/x86_64-linux-nix/Cabal-1.24.2.0/setup/setup ...
+[1 of 2] Compiling Main             ( /run/user/1001/stack30224/pcap-0.4.5.2/Setup.lhs, /run/user/1001/stack30224/pcap-0.4.5.2/.stack-work/dist/x86_64-linux-nix/Cabal-1.24.2.0/setup/Main.o )
+[2 of 2] Compiling StackSetupShim   ( /home/sophia/.stack/setup-exe-src/setup-shim-mPHDZzAJ.hs, /run/user/1001/stack30224/pcap-0.4.5.2/.stack-work/dist/x86_64-linux-nix/Cabal-1.24.2.0/setup/StackSetupShim.o )
+Linking /run/user/1001/stack30224/pcap-0.4.5.2/.stack-work/dist/x86_64-linux-nix/Cabal-1.24.2.0/setup/setup ...
 Configuring pcap-0.4.5.2...
 checking for gcc... /nix/store/m3hr6jjlg637240q67as3js21dg6h218-gcc-wrapper-6.4.0/bin/cc
 checking whether the C compiler works... yes
@@ -34,5 +34,5 @@ Preprocessing library pcap-0.4.5.2...
 [1 of 2] Compiling Network.Pcap.Base ( .stack-work/dist/x86_64-linux-nix/Cabal-1.24.2.0/build/Network/Pcap/Base.hs, .stack-work/dist/x86_64-linux-nix/Cabal-1.24.2.0/build/Network/Pcap/Base.o )
 [2 of 2] Compiling Network.Pcap     ( Network/Pcap.hs, .stack-work/dist/x86_64-linux-nix/Cabal-1.24.2.0/build/Network/Pcap.o )
 Installing library in
-/home/sophia/Desktop/Haskell/Kospi200/.stack-work/install/x86_64-linux-nix/lts-9.21/8.0.2/lib/x86_64-linux-ghc-8.0.2/pcap-0.4.5.2-1BpQoUiBCFi2leHd3uMhJg
+/home/sophia/Desktop/Haskell/parse-quote/.stack-work/install/x86_64-linux-nix/lts-9.21/8.0.2/lib/x86_64-linux-ghc-8.0.2/pcap-0.4.5.2-1BpQoUiBCFi2leHd3uMhJg
 Registering pcap-0.4.5.2...

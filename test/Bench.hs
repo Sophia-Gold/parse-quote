@@ -29,13 +29,13 @@ parsePktTime =
 quoteAcceptOrdTime :: IO [Text]
 quoteAcceptOrdTime = do
   buf <- newMVar Map.empty
-  readPkts "test/mdf-kospi200.20110216-0.pcap" (enqueueAcceptOrd buf)
+  readPkts "test/golden.pcap" (enqueueAcceptOrd buf)
   buf <- takeMVar buf 
   return (showt <$> Map.assocs buf)
 
 quotePktOrder :: IO [Text]
 quotePktOrder = do
   buf <- newMVar Map.empty
-  readPkts "test/mdf-kospi200.20110216-0.pcap" (enqueuePktOrd buf)
+  readPkts "test/golden.pcap" (enqueuePktOrd buf)
   buf <- takeMVar buf
   return (showt <$> Map.assocs buf)

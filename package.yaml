@@ -1,4 +1,4 @@
-name:                Kospi200
+name:                parse-quote
 version:             0.1.0.0
 license:             BSD3
 author:              "Sophia Gold"
@@ -8,7 +8,7 @@ copyright:           "2018 Sophia Gold"
 extra-source-files:
 - README.md
 
-description: Code Sample for Tsuru Capital
+description: pcap/bytestring parser for streaming market data
 
 dependencies:
 - base >= 4.9 && < 5
@@ -36,7 +36,7 @@ executables:
     - -with-rtsopts=-A8G
     - -O2
     dependencies:
-    - Kospi200
+    - parse-quote
 
 tests:
   parse-quote-test:
@@ -48,7 +48,7 @@ tests:
     - -with-rtsopts=-N
     - -O2
     dependencies:
-    - Kospi200
+    - parse-quote
     - tasty
     - tasty-hunit
 
@@ -64,6 +64,6 @@ benchmarks:
     - -with-rtsopts=-A8G
     - -O2
     dependencies:
-    - Kospi200
+    - parse-quote
     - criterion
     - text
