@@ -1,0 +1,102 @@
+.TH CABAL 1
+.SH NAME
+cabal \- a system for building and packaging Haskell libraries and programs
+.SH SYNOPSIS
+.B cabal
+.I command
+.RI < arguments |[ options ]>...
+
+Where the
+.I commands
+are
+
+.B cabal install
+.R - Install packages.
+.br
+.B cabal update
+.R - Updates list of known packages.
+.br
+.B cabal list
+.R - List packages matching a search string.
+.br
+.B cabal info
+.R - Display detailed information about a particular package.
+.br
+.B cabal fetch
+.R - Downloads packages for later installation.
+.br
+.B cabal freeze
+.R - Freeze dependencies.
+.br
+.B cabal get
+.R - Download/Extract a package's source code (repository).
+.br
+.B cabal check
+.R - Check the package for common mistakes.
+.br
+.B cabal sdist
+.R - Generate a source distribution file (.tar.gz).
+.br
+.B cabal upload
+.R - Uploads source packages or documentation to Hackage.
+.br
+.B cabal report
+.R - Upload build reports to a remote server.
+.br
+.B cabal run
+.R - Builds and runs an executable.
+.br
+.B cabal init
+.R - Create a new .cabal package file (interactively).
+.br
+.B cabal configure
+.R - Prepare to build the package.
+.br
+.B cabal build
+.R - Compile all/specific components.
+.br
+.B cabal repl
+.R - Open an interpreter session for the given component.
+.br
+.B cabal sandbox
+.R - Create/modify/delete a sandbox.
+.br
+.B cabal haddock
+.R - Generate Haddock HTML documentation.
+.br
+.B cabal exec
+.R - Give a command access to the sandbox package repository.
+.br
+.B cabal user-config
+.R - Display and update the user's global cabal configuration.
+.br
+.B cabal clean
+.R - Clean up after a build.
+.br
+.B cabal gen-bounds
+.R - Generate dependency bounds.
+.br
+.B cabal copy
+.R - Copy the files into the install locations.
+.br
+.B cabal hscolour
+.R - Generate HsColour colourised code, in HTML format.
+.br
+.B cabal register
+.R - Register this package with the compiler.
+.br
+.B cabal test
+.R - Run all/specific tests in the test suite.
+.br
+.B cabal bench
+.R - Run all/specific benchmarks.
+.br
+.SH DESCRIPTION
+Cabal is the standard package system for Haskell software. It helps people to configure, 
+build and install Haskell software and to distribute it easily to other users and developers.
+
+The command line cabal tool (also referred to as cabal-install) helps with 
+installing existing packages and developing new packages. 
+It can be used to work with local packages or to install packages from online package archives, 
+including automatically installing dependencies. By default it is configured to use Hackage, 
+which is Haskell

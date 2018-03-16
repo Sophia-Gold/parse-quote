@@ -1,0 +1,384 @@
+
+==================== FINAL INTERFACE ====================
+2018-03-06 03:25:00.285503366 UTC
+
+interface Kospi200-0.1.0.0-HbCXTMBKnMfBwS3lExfzgt:Capture 8001
+  interface hash: 7c70b4f6796aa317e8b5a1177981d7d4
+  ABI hash: 7acf10fe12d3392c862a25db98d373bc
+  export-list hash: e5aeb94feb499a40e5620c182153e950
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 374e5f19d3929d63fc8ce1016a6b55cd
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Capture.enqueueAcceptOrd
+  Capture.enqueuePktOrd
+  Capture.readPkts
+module dependencies: Capture.Types Parser Parser.Types
+package dependencies: array-0.5.1.1@array-0.5.1.1
+                      attoparsec-0.13.1.0@attoparsec-0.13.1.0-Cmi9L1tD69wIVoI0nVzEDR
+                      base-4.9.0.0
+                      base-compat-0.9.3@base-compat-0.9.3-DrSgCcixJxxKb6RsGgHyiF
+                      base-orphans-0.5.4@base-orphans-0.5.4-5IQvrjd7gNP548VkOOyIq6
+                      bifunctors-5.4.2@bifunctors-5.4.2-Fvyg0vMaKqJGa1IztK92n
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0
+                      generic-deriving-1.11.2@generic-deriving-1.11.2-51phHL1YkkUJW3eGVFsGBO
+                      ghc-boot-th-8.0.1@ghc-boot-th-8.0.1 ghc-prim-0.5.0.0
+                      hashable-1.2.4.0@hashable-1.2.4.0-K5YnQdcMHnN9yDGPADESBF
+                      integer-gmp-1.0.0.1
+                      network-2.6.3.1@network-2.6.3.1-G4Up1CPKbp7DeFsnywOnGG
+                      pcap-0.4.5.2@pcap-0.4.5.2-Gjz0tmyqUIIIegUSnQKf75
+                      pretty-1.1.3.3@pretty-1.1.3.3
+                      primitive-0.6.1.0@primitive-0.6.1.0-Ip44DqhfCp21tTUYbecwa
+                      scientific-0.3.4.9@scientific-0.3.4.9-KFqAPDIQwA03kBkDAVdGL7
+                      tagged-0.8.5@tagged-0.8.5-CtgV6EcN0do8F92i1S6iYx
+                      template-haskell-2.11.0.0
+                      text-1.2.2.2@text-1.2.2.2-FIorhdfEwKc4H3v6Mihn0y
+                      text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s
+                      text-show-instances-3.4@text-show-instances-3.4-E6Plh0nqx8KLmApOIpxLhE
+                      th-lift-0.7.7@th-lift-0.7.7-JuNRTOt9I9JCRNDoGbQTGn
+                      time-1.6.0.1@time-1.6.0.1 transformers-0.5.2.0@transformers-0.5.2.0
+                      transformers-compat-0.5.1.4@transformers-compat-0.5.1.4-81lZyuOJOvsD0zyCv2TKld
+                      vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6
+orphans: attoparsec-0.13.1.0@attoparsec-0.13.1.0-Cmi9L1tD69wIVoI0nVzEDR:Data.Attoparsec.ByteString.Char8
+         base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         hashable-1.2.4.0@hashable-1.2.4.0-K5YnQdcMHnN9yDGPADESBF:Data.Hashable.Generic
+         network-2.6.3.1@network-2.6.3.1-G4Up1CPKbp7DeFsnywOnGG:Network.Socket
+         text-1.2.2.2@text-1.2.2.2-FIorhdfEwKc4H3v6Mihn0y:Data.Text
+         text-1.2.2.2@text-1.2.2.2-FIorhdfEwKc4H3v6Mihn0y:Data.Text.Lazy
+         text-1.2.2.2@text-1.2.2.2-FIorhdfEwKc4H3v6Mihn0y:Data.Text.Show
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Control.Applicative
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Control.Concurrent
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Control.Exception
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Control.Monad.ST
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Array
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Bool
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.ByteString
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Char
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Complex
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Data
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Dynamic
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Either
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Fixed
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Floating
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Functor.Compose
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Functor.Identity
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Functor.Product
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Functor.Sum
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Integral
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.List
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.List.NonEmpty
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Maybe
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Monoid
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Ord
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Proxy
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Ratio
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Semigroup
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Text
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Tuple
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Type.Coercion
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Type.Equality
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Typeable
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Version
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Void
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Foreign.C.Types
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Foreign.Ptr
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.GHC.Event
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.GHC.Fingerprint
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.GHC.Generics
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.GHC.RTS.Flags
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.GHC.Stack
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.GHC.StaticPtr
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.GHC.Stats
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.GHC.TypeLits
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Numeric.Natural
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.System.Exit
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.System.IO
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.System.Posix.Types
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.TH
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Text.Read
+         text-show-instances-3.4@text-show-instances-3.4-E6Plh0nqx8KLmApOIpxLhE:TextShow.Data.Time
+         th-lift-0.7.7@th-lift-0.7.7-JuNRTOt9I9JCRNDoGbQTGn:Language.Haskell.TH.Lift
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Calendar.Gregorian
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Parse
+         time-1.6.0.1@time-1.6.0.1:Data.Time.LocalTime.LocalTime
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Fusion.Bundle
+family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-Cmi9L1tD69wIVoI0nVzEDR:Data.Attoparsec.Internal.Types
+                         base-4.9.0.0:Control.Applicative base-4.9.0.0:Data.Complex
+                         base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Compose
+                         base-4.9.0.0:Data.Functor.Const base-4.9.0.0:Data.Functor.Identity
+                         base-4.9.0.0:Data.Functor.Product base-4.9.0.0:Data.Functor.Sum
+                         base-4.9.0.0:Data.List.NonEmpty base-4.9.0.0:Data.Monoid
+                         base-4.9.0.0:Data.Semigroup base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:Data.Version base-4.9.0.0:Data.Void
+                         base-4.9.0.0:GHC.Exts base-4.9.0.0:GHC.Generics
+                         base-4.9.0.0:GHC.IO.Exception base-4.9.0.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         ghc-boot-th-8.0.1@ghc-boot-th-8.0.1:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.1.0@primitive-0.6.1.0-Ip44DqhfCp21tTUYbecwa:Control.Monad.Primitive
+                         tagged-0.8.5@tagged-0.8.5-CtgV6EcN0do8F92i1S6iYx:Data.Tagged
+                         template-haskell-2.11.0.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.2@text-1.2.2.2-FIorhdfEwKc4H3v6Mihn0y:Data.Text
+                         text-1.2.2.2@text-1.2.2.2-FIorhdfEwKc4H3v6Mihn0y:Data.Text.Lazy
+                         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.FromStringTextShow
+                         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Options
+                         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector
+import  -/  Capture.Types 6ce2343bc709a2751bad08a60633756e
+  exports: ec543326b893db3c6b37eab4d35574e3
+  AcceptTimeBuffer f11f32338d6914d0dea86799e5c6a42c
+  PktTimeBuffer f9796cf2d8f63a0d4118964e4a9d39c2
+import  -/  Parser 7f2339a6cfbf7bd2a4736db8d8e16fb6
+  exports: d82e45f6005d3898c3bde1692c089256
+  parsePkt cac78fb2f8fe6dc9565740e42f95e1e7
+import  -/  Parser.Types 64751bd3cafba4341766b2381cc96075
+  exports: 04f774dfe59faf05f443a4c86ff2abe6
+  PktTime 8fcf2705bd3fb99537259ef4b0425a59
+import  -/  base-4.9.0.0:Control.Concurrent.MVar 8e69a5596a64b6487076dea38478815b
+import  -/  base-4.9.0.0:Data.Either bd9f099b82d4ed2d98c56d7144ac6957
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.IO 7ddc7086a7fc3b7d7043cc7bc59a04ba
+import  -/  base-4.9.0.0:GHC.MVar 5a1706a0bf7a7186672dad8d28229b31
+import  -/  base-4.9.0.0:GHC.Real 08bf4acb5f2508f89d6fbcd57fe232e9
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  base-4.9.0.0:System.IO eb1d40aa793a4047069a5023f2ebcfe3
+import  -/  bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Char8 49426525406a134b63e5a11b574dbd77
+import  -/  containers-0.5.7.1@containers-0.5.7.1:Data.Map.Strict 2597c3599012c0fa55c30f93a0324f00
+import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
+import  -/  pcap-0.4.5.2@pcap-0.4.5.2-Gjz0tmyqUIIIegUSnQKf75:Network.Pcap b31a67a11ed100657bbe9aadfbe54aaa
+import  -/  pcap-0.4.5.2@pcap-0.4.5.2-Gjz0tmyqUIIIegUSnQKf75:Network.Pcap.Base 7972f85984bda65272d0fa00912af053
+import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time.Clock b91051c7767d1f23314064be1d4311d7
+import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time.Clock.Scale a496522dfed713797d33adfe44163f2c
+06984dd30da1e35ef0c76a90322c6b92
+  $sinsert_$sgo1 ::
+    Parser.Types.PktTime
+    -> a1
+    -> Data.Map.Base.Map Parser.Types.PktTime a1
+    -> Data.Map.Base.Map Parser.Types.PktTime a1
+  {- Arity: 3, Strictness: <S,1*U><S,1*U><S,1*U> -}
+1437f9903f43864d83fed99e90386239
+  $sinsert_$sgo4 ::
+    Parser.Types.AcceptTime
+    -> a1
+    -> Data.Map.Base.Map Parser.Types.AcceptTime a1
+    -> Data.Map.Base.Map Parser.Types.AcceptTime a1
+  {- Arity: 3, Strictness: <S,1*U><S,1*U><S,1*U> -}
+c3ae5026aa748bdabb14c8099c02a3d7
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Capture.$trModule2
+                   Capture.$trModule1) -}
+aa9c81cf81ed70d68ba597a3b620a59a
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Capture"#) -}
+a4ba4a6416eb3c633c6cbd1d51a52d16
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "Kospi200-0.1.0.0-HbCXTMBKnMfBwS3lExfzgt"#) -}
+21505bbaa080869ae06894e86eb858ae
+  enqueueAcceptOrd ::
+    Capture.Types.AcceptTimeBuffer -> Network.Pcap.CallbackBS
+  {- Arity: 4,
+     Strictness: <L,1*U(U)><L,1*U(A,U,A,A)><L,1*U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Capture.enqueueAcceptOrd1
+                  `cast`
+                (<Capture.Types.AcceptTimeBuffer>_R
+                 ->_R <Network.Pcap.Base.PktHdr>_R
+                 ->_R <Data.ByteString.Internal.ByteString>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+9bd82584192be00be25fa81c33fda3d5
+  enqueueAcceptOrd1 ::
+    Capture.Types.AcceptTimeBuffer
+    -> Network.Pcap.Base.PktHdr
+    -> Data.ByteString.Internal.ByteString
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 4,
+     Strictness: <L,1*U(U)><L,1*U(A,U,A,A)><L,1*U(U,U,U,U)><S,U>,
+     Unfolding: (\ (buf :: Capture.Types.AcceptTimeBuffer)
+                   (hdr :: Network.Pcap.Base.PktHdr)
+                   (pkt :: Data.ByteString.Internal.ByteString)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case Parser.parsePkt pkt of wild {
+                   Data.Either.Left err -> (# eta, GHC.Tuple.() #)
+                   Data.Either.Right ds
+                   -> case ds of wild1 { (,) at p ->
+                      case buf of wild2 { GHC.MVar.MVar mvar# ->
+                      case GHC.Prim.takeMVar#
+                             @ GHC.Prim.RealWorld
+                             @ (Data.Map.Base.Map
+                                  Parser.Types.AcceptTime
+                                  (Parser.Types.PktTime, Parser.Types.Packet))
+                             mvar#
+                             eta of ds1 { (#,#) ipv ipv1 ->
+                      case GHC.Prim.putMVar#
+                             @ GHC.Prim.RealWorld
+                             @ (Data.Map.Base.Map
+                                  Parser.Types.AcceptTime
+                                  (Parser.Types.PktTime, Parser.Types.Packet))
+                             mvar#
+                             (Capture.$sinsert_$sgo4
+                                @ (Parser.Types.PktTime, Parser.Types.Packet)
+                                at
+                                ((GHC.Real.^_$s^
+                                    (case hdr of wild3 { Network.Pcap.Base.PktHdr dt dt1 dt2 dt3 ->
+                                     GHC.Integer.Type.smallInteger (GHC.Prim.word2Int# dt1) })
+                                    Capture.enqueueAcceptOrd2)
+                                   `cast`
+                                 (Trans
+                                      (Sym (Data.Fixed.N:Fixed[0] <Data.Fixed.E12>_P))
+                                      (Trans
+                                           (Sym (Data.Time.Clock.Scale.N:DiffTime[0]))
+                                           (Sym (Parser.Types.N:PktTime[0])))),
+                                 p)
+                                ipv1)
+                             ipv of s2# { DEFAULT ->
+                      (# s2#, GHC.Tuple.() #) } } } } }) -}
+da789b1da6a1fc9580c68c1fe4e6ffb5
+  enqueueAcceptOrd2 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (6) -}
+76990627cb5b25e3700d8d3640e78ce5
+  enqueuePktOrd ::
+    Capture.Types.PktTimeBuffer -> Network.Pcap.CallbackBS
+  {- Arity: 4,
+     Strictness: <L,1*U(U)><L,1*U(A,U,A,A)><L,1*U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Capture.enqueuePktOrd1
+                  `cast`
+                (<Capture.Types.PktTimeBuffer>_R
+                 ->_R <Network.Pcap.Base.PktHdr>_R
+                 ->_R <Data.ByteString.Internal.ByteString>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+cdd840d8723f80c533e89f346c83dac7
+  enqueuePktOrd1 ::
+    Capture.Types.PktTimeBuffer
+    -> Network.Pcap.Base.PktHdr
+    -> Data.ByteString.Internal.ByteString
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 4,
+     Strictness: <L,1*U(U)><L,1*U(A,U,A,A)><L,1*U(U,U,U,U)><S,U>,
+     Unfolding: (\ (buf :: Capture.Types.PktTimeBuffer)
+                   (hdr :: Network.Pcap.Base.PktHdr)
+                   (pkt :: Data.ByteString.Internal.ByteString)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case Parser.parsePkt pkt of wild {
+                   Data.Either.Left err -> (# eta, GHC.Tuple.() #)
+                   Data.Either.Right ds
+                   -> case ds of wild1 { (,) at p ->
+                      case buf of wild2 { GHC.MVar.MVar mvar# ->
+                      case GHC.Prim.takeMVar#
+                             @ GHC.Prim.RealWorld
+                             @ (Data.Map.Base.Map
+                                  Parser.Types.PktTime
+                                  (Parser.Types.AcceptTime, Parser.Types.Packet))
+                             mvar#
+                             eta of ds1 { (#,#) ipv ipv1 ->
+                      case GHC.Prim.putMVar#
+                             @ GHC.Prim.RealWorld
+                             @ (Data.Map.Base.Map
+                                  Parser.Types.PktTime
+                                  (Parser.Types.AcceptTime, Parser.Types.Packet))
+                             mvar#
+                             (Capture.$sinsert_$sgo1
+                                @ (Parser.Types.AcceptTime, Parser.Types.Packet)
+                                (GHC.Real.^_$s^
+                                   (case hdr of wild3 { Network.Pcap.Base.PktHdr dt dt1 dt2 dt3 ->
+                                    GHC.Integer.Type.smallInteger (GHC.Prim.word2Int# dt1) })
+                                   Capture.enqueueAcceptOrd2)
+                                  `cast`
+                                (Trans
+                                     (Sym (Data.Fixed.N:Fixed[0] <Data.Fixed.E12>_P))
+                                     (Trans
+                                          (Sym (Data.Time.Clock.Scale.N:DiffTime[0]))
+                                          (Sym (Parser.Types.N:PktTime[0]))))
+                                wild1
+                                ipv1)
+                             ipv of s2# { DEFAULT ->
+                      (# s2#, GHC.Tuple.() #) } } } } }) -}
+59b086894af2fd551ad2471c800c1861
+  readPkts ::
+    GHC.IO.FilePath -> Network.Pcap.CallbackBS -> GHC.Types.IO ()
+  {- Arity: 3, Strictness: <L,U><L,C(C1(C1(U(U,U))))><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Capture.readPkts1
+                  `cast`
+                (<GHC.IO.FilePath>_R
+                 ->_R <Network.Pcap.CallbackBS>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+e0fdf9a78055ef41a9e75eec18b4727f
+  readPkts1 ::
+    GHC.IO.FilePath
+    -> Network.Pcap.CallbackBS
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <L,U><L,C(C1(C1(U(U,U))))><S,U>,
+     Unfolding: (\ (path :: GHC.IO.FilePath)
+                   (callback :: Network.Pcap.CallbackBS)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Encoding.getForeignEncoding1 of wild { (,) getForeignEncoding5 setForeignEncoding1 ->
+                 case getForeignEncoding5
+                        `cast`
+                      (GHC.Types.N:IO[0] <GHC.IO.Encoding.Types.TextEncoding>_R)
+                        eta of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.Foreign.charIsRepresentable3
+                        @ (GHC.ForeignPtr.ForeignPtr Network.Pcap.Base.PcapTag)
+                        ipv1
+                        path
+                        Network.Pcap.Base.openOffline2
+                          `cast`
+                        (<Foreign.C.String.CString>_R
+                         ->_R Sym (GHC.Types.N:IO[0]
+                                       <GHC.ForeignPtr.ForeignPtr Network.Pcap.Base.PcapTag>_R))
+                        ipv of ds { (#,#) ipv2 ipv3 ->
+                 case ipv3 of wild1 { GHC.ForeignPtr.ForeignPtr fo ds2 ->
+                 case Network.Pcap.Base.$wstatistics
+                        fo
+                        ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                 case GHC.Prim.touch#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ GHC.ForeignPtr.ForeignPtrContents
+                        ds2
+                        ipv4 of s' { DEFAULT ->
+                 case Network.Pcap.Base.dispatch1
+                        (GHC.Ptr.Ptr @ Network.Pcap.Base.PcapTag fo)
+                        Capture.readPkts2
+                        (Network.Pcap.dispatchBS2 callback)
+                          `cast`
+                        (<Network.Pcap.Base.PktHdr>_R
+                         ->_R <GHC.Ptr.Ptr GHC.Word.Word8>_R
+                         ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                        s' of ds4 { (#,#) ipv6 ipv7 ->
+                 case GHC.Prim.touch#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ GHC.ForeignPtr.ForeignPtrContents
+                        ds2
+                        ipv6 of s'1 { DEFAULT ->
+                 (# s'1, GHC.Tuple.() #) } } } } } } } }) -}
+d1b586a7534f3c17aebb89b3a4487bd9
+  readPkts2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# -1#) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

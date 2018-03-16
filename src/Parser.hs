@@ -9,7 +9,8 @@ import qualified Data.Attoparsec.ByteString.Char8 as P
 import           Data.ByteString.Char8 (ByteString)
 import qualified Data.ByteString.Char8 as BS
 import           Data.Maybe (fromMaybe)
-import           Data.Time.Clock (picosecondsToDiffTime)
+import           Data.Time.Calendar (fromGregorian)
+import           Data.Time.Clock (UTCTime (..), picosecondsToDiffTime)
 
 parsePkt :: ByteString -> Either String (AcceptTime, Packet)
 parsePkt bs = do
@@ -37,6 +38,7 @@ parseAsks = let toInt = fst . fromMaybe (0, "") . BS.readInt
 
 parseAcceptTime :: Parser AcceptTime
 parseAcceptTime = let p = P.count 4 $ fst . fromMaybe (0, "") . BS.readInteger <$> P.take 2
-                      toPico = \p -> zipWith3 (\a b c -> a^b * c) p [6, 12, 12, 12] [1, 1, 60, 3600]
-                      toTime = \p -> picosecondsToDiffTime $ sum $ toPico p  -- convert to DiffTime
-                  in (AcceptTime . toTime) <$> p
+                      toPico = \p -> zipWith3 (\a b c -> a * 10^b * c) p [12, 12, 12, 6] [3600, 60, 1, 1]
+                      toUTC  = \p -> p + 32400*10^12  -- UTC+9
+                      toTime = \p -> picosecondsToDiffTime $ toUTC $ sum $ toPico p  -- microseconds -> picoseconds
+                  in (\p -> AcceptTime $ UTCTime (fromGregorian 2011 2 16) (toTime p)) <$> p  -- convert to UTCTime

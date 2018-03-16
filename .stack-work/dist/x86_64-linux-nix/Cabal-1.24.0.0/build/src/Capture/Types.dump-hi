@@ -1,0 +1,183 @@
+
+==================== FINAL INTERFACE ====================
+2018-03-06 02:41:11.832055243 UTC
+
+interface Kospi200-0.1.0.0-HbCXTMBKnMfBwS3lExfzgt:Capture.Types 8001
+  interface hash: 717133cb526d268954908ad8777e0826
+  ABI hash: 6ce2343bc709a2751bad08a60633756e
+  export-list hash: ec543326b893db3c6b37eab4d35574e3
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 5bdf70a66ab369fc090838b6d238f1d1
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Capture.Types.AcceptTimeBuffer
+  Capture.Types.AcceptTimeBuffer'
+  Capture.Types.PktTimeBuffer
+  Capture.Types.PktTimeBuffer'
+module dependencies: Parser.Types
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.0.0
+                      base-compat-0.9.3@base-compat-0.9.3-DrSgCcixJxxKb6RsGgHyiF
+                      base-orphans-0.5.4@base-orphans-0.5.4-5IQvrjd7gNP548VkOOyIq6
+                      bifunctors-5.4.2@bifunctors-5.4.2-Fvyg0vMaKqJGa1IztK92n
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0
+                      generic-deriving-1.11.2@generic-deriving-1.11.2-51phHL1YkkUJW3eGVFsGBO
+                      ghc-boot-th-8.0.1@ghc-boot-th-8.0.1 ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1 pretty-1.1.3.3@pretty-1.1.3.3
+                      tagged-0.8.5@tagged-0.8.5-CtgV6EcN0do8F92i1S6iYx
+                      template-haskell-2.11.0.0
+                      text-1.2.2.2@text-1.2.2.2-FIorhdfEwKc4H3v6Mihn0y
+                      text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s
+                      text-show-instances-3.4@text-show-instances-3.4-E6Plh0nqx8KLmApOIpxLhE
+                      th-lift-0.7.7@th-lift-0.7.7-JuNRTOt9I9JCRNDoGbQTGn
+                      time-1.6.0.1@time-1.6.0.1 transformers-0.5.2.0@transformers-0.5.2.0
+                      transformers-compat-0.5.1.4@transformers-compat-0.5.1.4-81lZyuOJOvsD0zyCv2TKld
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         text-1.2.2.2@text-1.2.2.2-FIorhdfEwKc4H3v6Mihn0y:Data.Text
+         text-1.2.2.2@text-1.2.2.2-FIorhdfEwKc4H3v6Mihn0y:Data.Text.Lazy
+         text-1.2.2.2@text-1.2.2.2-FIorhdfEwKc4H3v6Mihn0y:Data.Text.Show
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Control.Applicative
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Control.Concurrent
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Control.Exception
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Control.Monad.ST
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Array
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Bool
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.ByteString
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Char
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Complex
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Data
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Dynamic
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Either
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Fixed
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Floating
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Functor.Compose
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Functor.Identity
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Functor.Product
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Functor.Sum
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Integral
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.List
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.List.NonEmpty
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Maybe
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Monoid
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Ord
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Proxy
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Ratio
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Semigroup
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Text
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Tuple
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Type.Coercion
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Type.Equality
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Typeable
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Version
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Void
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Foreign.C.Types
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Foreign.Ptr
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.GHC.Event
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.GHC.Fingerprint
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.GHC.Generics
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.GHC.RTS.Flags
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.GHC.Stack
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.GHC.StaticPtr
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.GHC.Stats
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.GHC.TypeLits
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Numeric.Natural
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.System.Exit
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.System.IO
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.System.Posix.Types
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.TH
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Text.Read
+         text-show-instances-3.4@text-show-instances-3.4-E6Plh0nqx8KLmApOIpxLhE:TextShow.Data.Time
+         th-lift-0.7.7@th-lift-0.7.7-JuNRTOt9I9JCRNDoGbQTGn:Language.Haskell.TH.Lift
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Calendar.Gregorian
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Parse
+         time-1.6.0.1@time-1.6.0.1:Data.Time.LocalTime.LocalTime
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Complex base-4.9.0.0:Data.Either
+                         base-4.9.0.0:Data.Functor.Compose base-4.9.0.0:Data.Functor.Const
+                         base-4.9.0.0:Data.Functor.Identity
+                         base-4.9.0.0:Data.Functor.Product base-4.9.0.0:Data.Functor.Sum
+                         base-4.9.0.0:Data.List.NonEmpty base-4.9.0.0:Data.Monoid
+                         base-4.9.0.0:Data.Semigroup base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:Data.Version base-4.9.0.0:Data.Void
+                         base-4.9.0.0:GHC.Exts base-4.9.0.0:GHC.Generics
+                         base-4.9.0.0:GHC.IO.Exception base-4.9.0.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         ghc-boot-th-8.0.1@ghc-boot-th-8.0.1:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         tagged-0.8.5@tagged-0.8.5-CtgV6EcN0do8F92i1S6iYx:Data.Tagged
+                         template-haskell-2.11.0.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.2@text-1.2.2.2-FIorhdfEwKc4H3v6Mihn0y:Data.Text
+                         text-1.2.2.2@text-1.2.2.2-FIorhdfEwKc4H3v6Mihn0y:Data.Text.Lazy
+                         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.FromStringTextShow
+                         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Options
+import  -/  Parser.Types 64751bd3cafba4341766b2381cc96075
+  exports: 04f774dfe59faf05f443a4c86ff2abe6
+  AcceptTime 804cfb8471d0f4443ec3a7a12454645c
+  Packet fd72e2f00a4111630324a00ded8475e7
+  PktTime ebbb25f2f577a909efb832307243685a
+import  -/  base-4.9.0.0:Control.Concurrent.MVar 8e69a5596a64b6487076dea38478815b
+import  -/  base-4.9.0.0:Data.IORef 4b625b2df7d0ef688ec068837f79c7b0
+import  -/  base-4.9.0.0:GHC.IORef c27b760cf1b1851f9cf1a1693e335fa5
+import  -/  base-4.9.0.0:GHC.MVar 5a1706a0bf7a7186672dad8d28229b31
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base 1e8d61dcc59a1a983b27bab6fd6bdcaf
+import  -/  containers-0.5.7.1@containers-0.5.7.1:Data.Map.Strict 2597c3599012c0fa55c30f93a0324f00
+493ba9d17420178f696776790f7c87ce
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Capture.Types.$trModule2
+                   Capture.Types.$trModule1) -}
+000c2a129cc006694f7c8362a89af46c
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Capture.Types"#) -}
+4c179847a9ca5d8bdbd170f737e2540d
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "Kospi200-0.1.0.0-HbCXTMBKnMfBwS3lExfzgt"#) -}
+f11f32338d6914d0dea86799e5c6a42c
+  type AcceptTimeBuffer =
+    GHC.MVar.MVar
+      (Data.Map.Base.Map
+         Parser.Types.AcceptTime
+         (Parser.Types.PktTime, Parser.Types.Packet))
+3d4cfa52c73824495ee67aba22821302
+  type AcceptTimeBuffer' =
+    GHC.IORef.IORef
+      (Data.Map.Base.Map
+         Parser.Types.AcceptTime
+         (Parser.Types.PktTime, Parser.Types.Packet))
+f9796cf2d8f63a0d4118964e4a9d39c2
+  type PktTimeBuffer =
+    GHC.MVar.MVar
+      (Data.Map.Base.Map
+         Parser.Types.PktTime
+         (Parser.Types.AcceptTime, Parser.Types.Packet))
+6a5156eb2ef29e1a59a7fa884775bf6e
+  type PktTimeBuffer' =
+    GHC.IORef.IORef
+      (Data.Map.Base.Map
+         Parser.Types.PktTime
+         (Parser.Types.AcceptTime, Parser.Types.Packet))
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

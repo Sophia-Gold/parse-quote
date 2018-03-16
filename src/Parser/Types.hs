@@ -4,15 +4,15 @@
 module Parser.Types where
 
 import Data.ByteString.Char8 (ByteString)
-import Data.Time.Clock (DiffTime)
+import Data.Time.Clock (UTCTime)
 import Data.Semigroup ((<>))
 import TextShow
 import TextShow.Data.ByteString
 import TextShow.Data.Time
 import TextShow.TH
 
-newtype PktTime = PktTime DiffTime deriving (Eq, Ord)
-newtype AcceptTime = AcceptTime DiffTime deriving (Eq, Ord)
+newtype PktTime = PktTime UTCTime deriving (Eq, Ord)
+newtype AcceptTime = AcceptTime UTCTime deriving (Eq, Ord)
 
 instance TextShow PktTime where
   showb (PktTime t) = "Packet-Time: " <> showb t

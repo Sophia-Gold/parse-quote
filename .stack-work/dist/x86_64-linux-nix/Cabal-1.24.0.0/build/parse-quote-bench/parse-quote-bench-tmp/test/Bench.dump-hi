@@ -1,0 +1,1127 @@
+
+==================== FINAL INTERFACE ====================
+2018-03-06 02:46:38.978207479 UTC
+
+interface main@main:Main 8001
+  interface hash: 05f5c36730311a46561d9de0374187ee
+  ABI hash: 8b3709c5c1103a02a52670b7aad70260
+  export-list hash: 5d4489e4e6305c6af978f07cdadd5cf0
+  orphan hash: 4bab94cc7e42c8a5904ae44dd12ae30b
+  flag hash: b618509963013aba47bc4488b2d64170
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.main
+  Main.parsePktTime
+  Main.quoteAcceptOrdTime
+  Main.quoteAcceptOrdTime'
+  Main.quotePktOrder
+  Main.quotePktOrder'
+module dependencies:
+package dependencies: Glob-0.7.14@Glob-0.7.14-JPiVrtb5jL5BeQhtkal5dv
+                      Kospi200-0.1.0.0@Kospi200-0.1.0.0-HbCXTMBKnMfBwS3lExfzgt
+                      abstract-par-0.3.3@abstract-par-0.3.3-I2gvKCBAweu3uYwWNazPJ0
+                      aeson-0.11.3.0@aeson-0.11.3.0-3XxXEAL3BARIsTB18VsvDs
+                      ansi-terminal-0.6.3@ansi-terminal-0.6.3-IjphRY721wqJl2NJA5qPEj
+                      ansi-wl-pprint-0.6.7.3@ansi-wl-pprint-0.6.7.3-1E9Tnw5zbIM9zWjP4Y7EaL
+                      array-0.5.1.1@array-0.5.1.1
+                      attoparsec-0.13.1.0@attoparsec-0.13.1.0-Cmi9L1tD69wIVoI0nVzEDR
+                      base-4.9.0.0
+                      base-compat-0.9.3@base-compat-0.9.3-DrSgCcixJxxKb6RsGgHyiF
+                      base-orphans-0.5.4@base-orphans-0.5.4-5IQvrjd7gNP548VkOOyIq6
+                      bifunctors-5.4.2@bifunctors-5.4.2-Fvyg0vMaKqJGa1IztK92n
+                      binary-0.8.3.0@binary-0.8.3.0
+                      blaze-builder-0.4.0.2@blaze-builder-0.4.0.2-8AFtRXOluGgFgY4qRuaTmF
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      cassava-0.4.5.1@cassava-0.4.5.1-1OwrLC7LeCz1pWAEvUXNJw
+                      containers-0.5.7.1@containers-0.5.7.1
+                      criterion-1.1.1.0@criterion-1.1.1.0-A9ijIVm5ccF37qMLyZDqVR
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 directory-1.2.6.2@directory-1.2.6.2
+                      dlist-0.8.0.2@dlist-0.8.0.2-GWAMmbX9rLg3tqrbOizHGv
+                      filepath-1.4.1.0@filepath-1.4.1.0
+                      generic-deriving-1.11.2@generic-deriving-1.11.2-51phHL1YkkUJW3eGVFsGBO
+                      ghc-boot-th-8.0.1@ghc-boot-th-8.0.1 ghc-prim-0.5.0.0
+                      hashable-1.2.4.0@hashable-1.2.4.0-K5YnQdcMHnN9yDGPADESBF
+                      hastache-0.6.1@hastache-0.6.1-LMYvfuG2cuM1SNLB5sCHOX
+                      ieee754-0.7.9@ieee754-0.7.9-GGOMObQlFhs75IwEfmeIx2
+                      integer-gmp-1.0.0.1
+                      math-functions-0.2.1.0@math-functions-0.2.1.0-JE0wcV77zWeIiF13ulGtAh
+                      monad-par-0.3.4.8@monad-par-0.3.4.8-Lwl0SzUlKUSHwrUTAiiw06
+                      monad-par-extras-0.3.3@monad-par-extras-0.3.3-EJjMy6Ffx2aEZ9sTU5n83S
+                      mtl-2.2.1@mtl-2.2.1-6qsR1PHUy5lL47Hpoa4jCM
+                      mwc-random-0.13.6.0@mwc-random-0.13.6.0-FUaj8bchJGZ5iNie4Hw9wl
+                      network-2.6.3.1@network-2.6.3.1-G4Up1CPKbp7DeFsnywOnGG
+                      optparse-applicative-0.12.1.0@optparse-applicative-0.12.1.0-DaRxepbEB7v12fB3H3uUKs
+                      pcap-0.4.5.2@pcap-0.4.5.2-Gjz0tmyqUIIIegUSnQKf75
+                      pretty-1.1.3.3@pretty-1.1.3.3
+                      primitive-0.6.1.0@primitive-0.6.1.0-Ip44DqhfCp21tTUYbecwa
+                      process-1.4.2.0@process-1.4.2.0
+                      scientific-0.3.4.9@scientific-0.3.4.9-KFqAPDIQwA03kBkDAVdGL7
+                      statistics-0.13.3.0@statistics-0.13.3.0-3yYbriPGblz6az9lbPXD8c
+                      syb-0.6@syb-0.6-C65vWCsht6A8uLstpQIXyj
+                      tagged-0.8.5@tagged-0.8.5-CtgV6EcN0do8F92i1S6iYx
+                      template-haskell-2.11.0.0
+                      text-1.2.2.2@text-1.2.2.2-FIorhdfEwKc4H3v6Mihn0y
+                      text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s
+                      text-show-instances-3.4@text-show-instances-3.4-E6Plh0nqx8KLmApOIpxLhE
+                      th-lift-0.7.7@th-lift-0.7.7-JuNRTOt9I9JCRNDoGbQTGn
+                      time-1.6.0.1@time-1.6.0.1 transformers-0.5.2.0@transformers-0.5.2.0
+                      transformers-compat-0.5.1.4@transformers-compat-0.5.1.4-81lZyuOJOvsD0zyCv2TKld
+                      unix-2.7.2.0@unix-2.7.2.0
+                      unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-71UrsbJwTP48VhBarjNxzu
+                      vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6
+                      vector-algorithms-0.7.0.1@vector-algorithms-0.7.0.1-8R8UpWgvBC926XMxBjYPpx
+                      vector-binary-instances-0.2.3.5@vector-binary-instances-0.2.3.5-51dY79s13NxAZjgNNzK6dp
+                      vector-th-unbox-0.2.1.6@vector-th-unbox-0.2.1.6-GMTpzttBvqGAEXamQ10jEK
+orphans: aeson-0.11.3.0@aeson-0.11.3.0-3XxXEAL3BARIsTB18VsvDs:Data.Aeson.Types.Generic
+         aeson-0.11.3.0@aeson-0.11.3.0-3XxXEAL3BARIsTB18VsvDs:Data.Aeson.Types.Instances
+         attoparsec-0.13.1.0@attoparsec-0.13.1.0-Cmi9L1tD69wIVoI0nVzEDR:Data.Attoparsec.ByteString.Char8
+         attoparsec-0.13.1.0@attoparsec-0.13.1.0-Cmi9L1tD69wIVoI0nVzEDR:Data.Attoparsec.Text.Internal
+         base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         hashable-1.2.4.0@hashable-1.2.4.0-K5YnQdcMHnN9yDGPADESBF:Data.Hashable.Generic
+         monad-par-0.3.4.8@monad-par-0.3.4.8-Lwl0SzUlKUSHwrUTAiiw06:Control.Monad.Par.Scheds.Trace
+         network-2.6.3.1@network-2.6.3.1-G4Up1CPKbp7DeFsnywOnGG:Network.Socket
+         syb-0.6@syb-0.6-C65vWCsht6A8uLstpQIXyj:Data.Generics.Instances
+         text-1.2.2.2@text-1.2.2.2-FIorhdfEwKc4H3v6Mihn0y:Data.Text
+         text-1.2.2.2@text-1.2.2.2-FIorhdfEwKc4H3v6Mihn0y:Data.Text.Lazy
+         text-1.2.2.2@text-1.2.2.2-FIorhdfEwKc4H3v6Mihn0y:Data.Text.Show
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Control.Applicative
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Control.Concurrent
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Control.Exception
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Control.Monad.ST
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Array
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Bool
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.ByteString
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Char
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Complex
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Data
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Dynamic
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Either
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Fixed
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Floating
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Functor.Compose
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Functor.Identity
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Functor.Product
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Functor.Sum
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Integral
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.List
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.List.NonEmpty
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Maybe
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Monoid
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Ord
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Proxy
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Ratio
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Semigroup
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Text
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Tuple
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Type.Coercion
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Type.Equality
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Typeable
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Version
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Data.Void
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Foreign.C.Types
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Foreign.Ptr
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.GHC.Event
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.GHC.Fingerprint
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.GHC.Generics
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.GHC.RTS.Flags
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.GHC.Stack
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.GHC.StaticPtr
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.GHC.Stats
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.GHC.TypeLits
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Numeric.Natural
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.System.Exit
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.System.IO
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.System.Posix.Types
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.TH
+         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Text.Read
+         text-show-instances-3.4@text-show-instances-3.4-E6Plh0nqx8KLmApOIpxLhE:TextShow.Data.Time
+         th-lift-0.7.7@th-lift-0.7.7-JuNRTOt9I9JCRNDoGbQTGn:Language.Haskell.TH.Lift
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Calendar.Gregorian
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Parse
+         time-1.6.0.1@time-1.6.0.1:Data.Time.LocalTime.LocalTime
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Fusion.Bundle
+         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
+         vector-binary-instances-0.2.3.5@vector-binary-instances-0.2.3.5-51dY79s13NxAZjgNNzK6dp:Data.Vector.Binary
+family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-Cmi9L1tD69wIVoI0nVzEDR:Data.Attoparsec.Internal.Types
+                         base-4.9.0.0:Control.Applicative base-4.9.0.0:Data.Complex
+                         base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Compose
+                         base-4.9.0.0:Data.Functor.Const base-4.9.0.0:Data.Functor.Identity
+                         base-4.9.0.0:Data.Functor.Product base-4.9.0.0:Data.Functor.Sum
+                         base-4.9.0.0:Data.List.NonEmpty base-4.9.0.0:Data.Monoid
+                         base-4.9.0.0:Data.Semigroup base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:Data.Version base-4.9.0.0:Data.Void
+                         base-4.9.0.0:GHC.Exts base-4.9.0.0:GHC.Generics
+                         base-4.9.0.0:GHC.IO.Exception base-4.9.0.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         criterion-1.1.1.0@criterion-1.1.1.0-A9ijIVm5ccF37qMLyZDqVR:Criterion.Main.Options
+                         criterion-1.1.1.0@criterion-1.1.1.0-A9ijIVm5ccF37qMLyZDqVR:Criterion.Report
+                         criterion-1.1.1.0@criterion-1.1.1.0-A9ijIVm5ccF37qMLyZDqVR:Criterion.Types
+                         dlist-0.8.0.2@dlist-0.8.0.2-GWAMmbX9rLg3tqrbOizHGv:Data.DList
+                         ghc-boot-th-8.0.1@ghc-boot-th-8.0.1:GHC.LanguageExtensions.Type
+                         math-functions-0.2.1.0@math-functions-0.2.1.0-JE0wcV77zWeIiF13ulGtAh:Numeric.RootFinding
+                         math-functions-0.2.1.0@math-functions-0.2.1.0-JE0wcV77zWeIiF13ulGtAh:Numeric.Sum
+                         mwc-random-0.13.6.0@mwc-random-0.13.6.0-FUaj8bchJGZ5iNie4Hw9wl:System.Random.MWC
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.1.0@primitive-0.6.1.0-Ip44DqhfCp21tTUYbecwa:Control.Monad.Primitive
+                         statistics-0.13.3.0@statistics-0.13.3.0-3yYbriPGblz6az9lbPXD8c:Statistics.Distribution.Normal
+                         statistics-0.13.3.0@statistics-0.13.3.0-3yYbriPGblz6az9lbPXD8c:Statistics.Math.RootFinding
+                         statistics-0.13.3.0@statistics-0.13.3.0-3yYbriPGblz6az9lbPXD8c:Statistics.Resampling
+                         statistics-0.13.3.0@statistics-0.13.3.0-3yYbriPGblz6az9lbPXD8c:Statistics.Resampling.Bootstrap
+                         tagged-0.8.5@tagged-0.8.5-CtgV6EcN0do8F92i1S6iYx:Data.Tagged
+                         template-haskell-2.11.0.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.2@text-1.2.2.2-FIorhdfEwKc4H3v6Mihn0y:Data.Text
+                         text-1.2.2.2@text-1.2.2.2-FIorhdfEwKc4H3v6Mihn0y:Data.Text.Lazy
+                         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.FromStringTextShow
+                         text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Options
+                         unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-71UrsbJwTP48VhBarjNxzu:Data.HashMap.Base
+                         unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-71UrsbJwTP48VhBarjNxzu:Data.HashSet
+                         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector
+                         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Primitive
+                         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Storable
+                         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
+                         vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed.Base
+import  -/  Kospi200-0.1.0.0@Kospi200-0.1.0.0-HbCXTMBKnMfBwS3lExfzgt:Capture 153ea422c1dca585cf06260994eb2c2b
+import  -/  Kospi200-0.1.0.0@Kospi200-0.1.0.0-HbCXTMBKnMfBwS3lExfzgt:Parser 7f2339a6cfbf7bd2a4736db8d8e16fb6
+import  -/  Kospi200-0.1.0.0@Kospi200-0.1.0.0-HbCXTMBKnMfBwS3lExfzgt:Parser.Types 64751bd3cafba4341766b2381cc96075
+import  -/  base-4.9.0.0:Control.Concurrent.MVar 8e69a5596a64b6487076dea38478815b
+import  -/  base-4.9.0.0:Data.Functor 6fc476505db88d678632a4a838125f13
+import  -/  base-4.9.0.0:Data.IORef 4b625b2df7d0ef688ec068837f79c7b0
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.IORef c27b760cf1b1851f9cf1a1693e335fa5
+import  -/  base-4.9.0.0:GHC.MVar 5a1706a0bf7a7186672dad8d28229b31
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Char8 49426525406a134b63e5a11b574dbd77
+import  -/  bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Internal 1a31a1f30d9522329d9076dffd947c78
+import  -/  containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base 1e8d61dcc59a1a983b27bab6fd6bdcaf
+import  -/  containers-0.5.7.1@containers-0.5.7.1:Data.Map.Strict 2597c3599012c0fa55c30f93a0324f00
+import  -/  criterion-1.1.1.0@criterion-1.1.1.0-A9ijIVm5ccF37qMLyZDqVR:Criterion.Main 39f65ae88982b92df8ad015ca522e255
+import  -/  criterion-1.1.1.0@criterion-1.1.1.0-A9ijIVm5ccF37qMLyZDqVR:Criterion.Types a169d610c30535cbfcf36ca3f252b54e
+import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
+import  -/  text-1.2.2.2@text-1.2.2.2-FIorhdfEwKc4H3v6Mihn0y:Data.Text 73dce21f334a71527e8e492d6a5cdced
+import  -/  text-1.2.2.2@text-1.2.2.2-FIorhdfEwKc4H3v6Mihn0y:Data.Text.Internal 6f1b29df8e4d49e83bece2b280b3acea
+import  -/  text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow 13785a1dbb0cfed764149726c76da6e9
+import  -/  text-show-3.4@text-show-3.4-CAwfPPyFdWEJi3QBgKz62s:TextShow.Classes faea75731567116a233e6f8618e2a49c
+7e13f03aaafa9310065127d29ad98185
+  $s$fTextShow(,) ::
+    TextShow.Classes.TextShow
+      (Parser.Types.PktTime, Parser.Types.Packet)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Parser.Types.PktTime, Parser.Types.Packet)
+                  (TextShow.Data.Tuple.$fTextShow(,)_$cshowbPrec
+                     @ Parser.Types.PktTime
+                     @ Parser.Types.Packet
+                     Parser.Types.$fTextShowPktTime
+                     Parser.Types.$fTextShowPacket)
+                  Main.$s$fTextShow(,)_$s$fTextShow(,)_$cshowb
+                  Main.$s$fTextShow(,)_$s$fTextShow(,)_$cshowbList
+                  Main.$s$fTextShow(,)_$s$fTextShow(,)_$cshowtPrec
+                  (TextShow.Data.Tuple.$fTextShow(,)_$cshowt
+                     @ Parser.Types.PktTime
+                     @ Parser.Types.Packet
+                     Parser.Types.$fTextShowPktTime
+                     Parser.Types.$fTextShowPacket)
+                  Main.$s$fTextShow(,)_$s$fTextShow(,)_$cshowtList
+                  Main.$s$fTextShow(,)_$s$fTextShow(,)_$cshowtlPrec
+                  Main.$s$fTextShow(,)_$s$fTextShow(,)_$cshowtl
+                  Main.$s$fTextShow(,)_$s$fTextShow(,)_$cshowtlList -}
+f055977c5dcc99a47bf041657ff0b94c
+  $s$fTextShow(,)1 ::
+    TextShow.Classes.TextShow
+      (Parser.Types.AcceptTime, Parser.Types.Packet)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Parser.Types.AcceptTime, Parser.Types.Packet)
+                  (TextShow.Data.Tuple.$fTextShow(,)_$cshowbPrec
+                     @ Parser.Types.AcceptTime
+                     @ Parser.Types.Packet
+                     Parser.Types.$fTextShowAcceptTime
+                     Parser.Types.$fTextShowPacket)
+                  Main.$s$fTextShow(,)_$s$fTextShow(,)_$cshowb1
+                  Main.$s$fTextShow(,)_$s$fTextShow(,)_$cshowbList1
+                  Main.$s$fTextShow(,)_$s$fTextShow(,)_$cshowtPrec1
+                  (TextShow.Data.Tuple.$fTextShow(,)_$cshowt
+                     @ Parser.Types.AcceptTime
+                     @ Parser.Types.Packet
+                     Parser.Types.$fTextShowAcceptTime
+                     Parser.Types.$fTextShowPacket)
+                  Main.$s$fTextShow(,)_$s$fTextShow(,)_$cshowtList1
+                  Main.$s$fTextShow(,)_$s$fTextShow(,)_$cshowtlPrec1
+                  Main.$s$fTextShow(,)_$s$fTextShow(,)_$cshowtl1
+                  Main.$s$fTextShow(,)_$s$fTextShow(,)_$cshowtlList1 -}
+473d01af867e327ad2c7797f93668731
+  $s$fTextShow(,)_$s$fTextShow(,)_$cshowb ::
+    (Parser.Types.PktTime, Parser.Types.Packet)
+    -> Data.Text.Internal.Builder.Builder
+  {- Arity: 1, Strictness: <S,1*U(U,U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (eta :: (Parser.Types.PktTime, Parser.Types.Packet)) ->
+                 TextShow.Data.Tuple.$fTextShow(,)_$cshowbPrec
+                   @ Parser.Types.PktTime
+                   @ Parser.Types.Packet
+                   Parser.Types.$fTextShowPktTime
+                   Parser.Types.$fTextShowPacket
+                   (GHC.Types.I# 0#)
+                   eta) -}
+0906c8710d252a51e2960c94ca4d7fd0
+  $s$fTextShow(,)_$s$fTextShow(,)_$cshowb1 ::
+    (Parser.Types.AcceptTime, Parser.Types.Packet)
+    -> Data.Text.Internal.Builder.Builder
+  {- Arity: 1, Strictness: <S,1*U(U,U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (eta :: (Parser.Types.AcceptTime, Parser.Types.Packet)) ->
+                 TextShow.Data.Tuple.$fTextShow(,)_$cshowbPrec
+                   @ Parser.Types.AcceptTime
+                   @ Parser.Types.Packet
+                   Parser.Types.$fTextShowAcceptTime
+                   Parser.Types.$fTextShowPacket
+                   (GHC.Types.I# 0#)
+                   eta) -}
+120e78b442592cc4c7230233a3db718e
+  $s$fTextShow(,)_$s$fTextShow(,)_$cshowbList ::
+    [(Parser.Types.PktTime, Parser.Types.Packet)]
+    -> Data.Text.Internal.Builder.Builder
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (eta :: [(Parser.Types.PktTime, Parser.Types.Packet)]) ->
+                 TextShow.Classes.showbListWith
+                   @ (Parser.Types.PktTime, Parser.Types.Packet)
+                   Main.$s$fTextShow(,)_$s$fTextShow(,)_$cshowb
+                   eta) -}
+a9288c56e1f18eccb46ffbf74441afe3
+  $s$fTextShow(,)_$s$fTextShow(,)_$cshowbList1 ::
+    [(Parser.Types.AcceptTime, Parser.Types.Packet)]
+    -> Data.Text.Internal.Builder.Builder
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (eta :: [(Parser.Types.AcceptTime, Parser.Types.Packet)]) ->
+                 TextShow.Classes.showbListWith
+                   @ (Parser.Types.AcceptTime, Parser.Types.Packet)
+                   Main.$s$fTextShow(,)_$s$fTextShow(,)_$cshowb1
+                   eta) -}
+2809e36521802d1b9fd3e6dff121244d
+  $s$fTextShow(,)_$s$fTextShow(,)_$cshowtList ::
+    [(Parser.Types.PktTime, Parser.Types.Packet)]
+    -> Data.Text.Internal.Text
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (eta :: [(Parser.Types.PktTime, Parser.Types.Packet)]) ->
+                 Data.Text.concat
+                   (Data.Text.Lazy.dropEnd_go
+                      (Main.$s$fTextShow(,)_$s$fTextShow(,)_$cshowtlList eta))) -}
+bc4751f24a330b44b0c3f3aae187dd5c
+  $s$fTextShow(,)_$s$fTextShow(,)_$cshowtList1 ::
+    [(Parser.Types.AcceptTime, Parser.Types.Packet)]
+    -> Data.Text.Internal.Text
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (eta :: [(Parser.Types.AcceptTime, Parser.Types.Packet)]) ->
+                 Data.Text.concat
+                   (Data.Text.Lazy.dropEnd_go
+                      (Main.$s$fTextShow(,)_$s$fTextShow(,)_$cshowtlList1 eta))) -}
+0b2ce4b34d64fda296d21691ba98ba8e
+  $s$fTextShow(,)_$s$fTextShow(,)_$cshowtPrec ::
+    GHC.Types.Int
+    -> (Parser.Types.PktTime, Parser.Types.Packet)
+    -> Data.Text.Internal.Text
+  {- Arity: 2, Strictness: <L,A><S,1*U(U,U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (p :: GHC.Types.Int)
+                   (x :: (Parser.Types.PktTime, Parser.Types.Packet)) ->
+                 Data.Text.concat
+                   (Data.Text.Lazy.dropEnd_go
+                      (Main.$s$fTextShow(,)_$s$fTextShow(,)_$cshowtlPrec p x))) -}
+555d0743eacbb2569f5739bdf751e46c
+  $s$fTextShow(,)_$s$fTextShow(,)_$cshowtPrec1 ::
+    GHC.Types.Int
+    -> (Parser.Types.AcceptTime, Parser.Types.Packet)
+    -> Data.Text.Internal.Text
+  {- Arity: 2, Strictness: <L,A><S,1*U(U,U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (p :: GHC.Types.Int)
+                   (x :: (Parser.Types.AcceptTime, Parser.Types.Packet)) ->
+                 Data.Text.concat
+                   (Data.Text.Lazy.dropEnd_go
+                      (Main.$s$fTextShow(,)_$s$fTextShow(,)_$cshowtlPrec1 p x))) -}
+f5a4f05c9534d24555c1f93d9e414c8f
+  $s$fTextShow(,)_$s$fTextShow(,)_$cshowtl ::
+    (Parser.Types.PktTime, Parser.Types.Packet)
+    -> Data.Text.Internal.Lazy.Text
+  {- Arity: 1, Strictness: <S,1*U(U,U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (eta :: (Parser.Types.PktTime, Parser.Types.Packet)) ->
+                 Data.Text.Internal.Builder.$wtoLazyTextWith
+                   112#
+                   (TextShow.Data.Tuple.$fTextShow(,)_$cshowbPrec
+                      @ Parser.Types.PktTime
+                      @ Parser.Types.Packet
+                      Parser.Types.$fTextShowPktTime
+                      Parser.Types.$fTextShowPacket
+                      (GHC.Types.I# 0#)
+                      eta)) -}
+477119d05b1b7a6df4dd3bc42d616b9f
+  $s$fTextShow(,)_$s$fTextShow(,)_$cshowtl1 ::
+    (Parser.Types.AcceptTime, Parser.Types.Packet)
+    -> Data.Text.Internal.Lazy.Text
+  {- Arity: 1, Strictness: <S,1*U(U,U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (eta :: (Parser.Types.AcceptTime, Parser.Types.Packet)) ->
+                 Data.Text.Internal.Builder.$wtoLazyTextWith
+                   112#
+                   (TextShow.Data.Tuple.$fTextShow(,)_$cshowbPrec
+                      @ Parser.Types.AcceptTime
+                      @ Parser.Types.Packet
+                      Parser.Types.$fTextShowAcceptTime
+                      Parser.Types.$fTextShowPacket
+                      (GHC.Types.I# 0#)
+                      eta)) -}
+9fbb7d7ec397a540df8424250cd732a8
+  $s$fTextShow(,)_$s$fTextShow(,)_$cshowtlList ::
+    [(Parser.Types.PktTime, Parser.Types.Packet)]
+    -> Data.Text.Internal.Lazy.Text
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (eta :: [(Parser.Types.PktTime, Parser.Types.Packet)]) ->
+                 Data.Text.Internal.Builder.$wtoLazyTextWith
+                   112#
+                   (Main.$s$fTextShow(,)_$s$fTextShow(,)_$cshowbList eta)) -}
+c0e8e050b853832628bbeaaa5828e8e1
+  $s$fTextShow(,)_$s$fTextShow(,)_$cshowtlList1 ::
+    [(Parser.Types.AcceptTime, Parser.Types.Packet)]
+    -> Data.Text.Internal.Lazy.Text
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (eta :: [(Parser.Types.AcceptTime, Parser.Types.Packet)]) ->
+                 Data.Text.Internal.Builder.$wtoLazyTextWith
+                   112#
+                   (Main.$s$fTextShow(,)_$s$fTextShow(,)_$cshowbList1 eta)) -}
+10cbdfd888ea3cd0fe9c6ae2b1c62901
+  $s$fTextShow(,)_$s$fTextShow(,)_$cshowtlPrec ::
+    GHC.Types.Int
+    -> (Parser.Types.PktTime, Parser.Types.Packet)
+    -> Data.Text.Internal.Lazy.Text
+  {- Arity: 2, Strictness: <L,A><S,1*U(U,U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (p :: GHC.Types.Int)
+                   (x :: (Parser.Types.PktTime, Parser.Types.Packet)) ->
+                 Data.Text.Internal.Builder.$wtoLazyTextWith
+                   112#
+                   (TextShow.Data.Tuple.$fTextShow(,)_$cshowbPrec
+                      @ Parser.Types.PktTime
+                      @ Parser.Types.Packet
+                      Parser.Types.$fTextShowPktTime
+                      Parser.Types.$fTextShowPacket
+                      p
+                      x)) -}
+769d3fbcf0382abc8d31c16e85393fa4
+  $s$fTextShow(,)_$s$fTextShow(,)_$cshowtlPrec1 ::
+    GHC.Types.Int
+    -> (Parser.Types.AcceptTime, Parser.Types.Packet)
+    -> Data.Text.Internal.Lazy.Text
+  {- Arity: 2, Strictness: <L,A><S,1*U(U,U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (p :: GHC.Types.Int)
+                   (x :: (Parser.Types.AcceptTime, Parser.Types.Packet)) ->
+                 Data.Text.Internal.Builder.$wtoLazyTextWith
+                   112#
+                   (TextShow.Data.Tuple.$fTextShow(,)_$cshowbPrec
+                      @ Parser.Types.AcceptTime
+                      @ Parser.Types.Packet
+                      Parser.Types.$fTextShowAcceptTime
+                      Parser.Types.$fTextShowPacket
+                      p
+                      x)) -}
+d6831ef04cb9301b090dfae6f7bb7ec7
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Main.$trModule2 Main.$trModule1) -}
+847d9fc3b8e6f0b424199f36b4999bb2
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Main"#) -}
+24ef6042833e75ffd7aa98b83ecca98d
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+8e8028ec73177e70ef3a156ed2785b32
+  $wgo1 ::
+    GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S,U><S,U>, Inline: [0] -}
+95bb97a9156b32686e6462bc21a32e4f
+  $wgo12 ::
+    GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S,U><S,U>, Inline: [0] -}
+81cfd1a29153d23e60e5879430fdf451
+  $wgo2 ::
+    GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S,U><S,U>, Inline: [0] -}
+7274647a23f6a8ab7c747b76f350a6f0
+  $wgo3 ::
+    GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S,U><S,U>, Inline: [0] -}
+af02064af7c164265b93b156f1d3c57b
+  main :: GHC.Types.IO ()
+  {- Arity: 1,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+1bc8284250acd8ebd3f5f4fef739a9cd
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (Criterion.Main.defaultMain2
+                   Criterion.Main.Options.defaultConfig
+                   Main.main2) -}
+0ea465b8b9739b501945819d6ac16134
+  main10 :: Criterion.Types.Benchmark
+  {- Strictness: m2,
+     Unfolding: (Criterion.Types.Benchmark
+                   Main.main12
+                   Main.main11
+                     `cast`
+                   (Trans
+                        (<GHC.Int.Int64>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                        (Sym (Criterion.Types.N:Benchmarkable[0])))) -}
+a235be20ba5a9ba9f0ce60958be968c4
+  main11 ::
+    GHC.Int.Int64
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S(S),1*U(U)><S,U>, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: GHC.Int.Int64)
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w of ww { GHC.Int.I64# ww1 -> Main.$wgo1 ww1 w1 }) -}
+18d908dad0c99d6aad410325de5b9295
+  main12 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "packet order w/ IORef"#) -}
+33c978ae3fec6e9c86e6b2f581a3ad9a
+  main13 :: Criterion.Types.Benchmark
+  {- Strictness: m2,
+     Unfolding: (Criterion.Types.Benchmark
+                   Main.main15
+                   Main.main14
+                     `cast`
+                   (Trans
+                        (<GHC.Int.Int64>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                        (Sym (Criterion.Types.N:Benchmarkable[0])))) -}
+0adcf32f10b13a641946a7b6f28a3e4f
+  main14 ::
+    GHC.Int.Int64
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S(S),1*U(U)><S,U>, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: GHC.Int.Int64)
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w of ww { GHC.Int.I64# ww1 -> Main.$wgo2 ww1 w1 }) -}
+278cc3fa0199b215bb435803b6821aa8
+  main15 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "accept time order"#) -}
+3a5d79d029dd1767d88cd1d3ecc89e78
+  main16 :: Criterion.Types.Benchmark
+  {- Strictness: m2,
+     Unfolding: (Criterion.Types.Benchmark
+                   Main.main18
+                   Main.main17
+                     `cast`
+                   (Trans
+                        (<GHC.Int.Int64>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                        (Sym (Criterion.Types.N:Benchmarkable[0])))) -}
+8d81d5b097c1193b6ab136ed15f48f87
+  main17 ::
+    GHC.Int.Int64
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S(S),1*U(U)><S,U>, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: GHC.Int.Int64)
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w of ww { GHC.Int.I64# ww1 -> Main.$wgo3 ww1 w1 }) -}
+a67c3df6a28a70ce92cef4ee540b7f77
+  main18 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "packet order"#) -}
+e4664ab7e05e5c4232c96649a5bea7db
+  main19 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+580aad192fff57bdbba31cb030b422e4
+  main2 :: [Criterion.Types.Benchmark]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Criterion.Types.Benchmark
+                   Main.parsePktTime
+                   Main.main3) -}
+17d0b39d550595f326950e1ecf0769df
+  main3 :: [Criterion.Types.Benchmark]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Criterion.Types.Benchmark
+                   Main.main16
+                   Main.main4) -}
+384b43c290abb09e3aac40efee978721
+  main4 :: [Criterion.Types.Benchmark]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Criterion.Types.Benchmark
+                   Main.main13
+                   Main.main5) -}
+bd111b1576a98bfd4c6cb4eb47cedcfa
+  main5 :: [Criterion.Types.Benchmark]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Criterion.Types.Benchmark
+                   Main.main10
+                   Main.main6) -}
+18e27fa36338eef0199d27c5091f4e0b
+  main6 :: [Criterion.Types.Benchmark]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Criterion.Types.Benchmark
+                   Main.main7
+                   (GHC.Types.[] @ Criterion.Types.Benchmark)) -}
+c4733ad7ec07ce5b31bd23791f59c067
+  main7 :: Criterion.Types.Benchmark
+  {- Strictness: m2,
+     Unfolding: (Criterion.Types.Benchmark
+                   Main.main9
+                   Main.main8
+                     `cast`
+                   (Trans
+                        (<GHC.Int.Int64>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                        (Sym (Criterion.Types.N:Benchmarkable[0])))) -}
+e01d0f811ebf2432abd62acf34e21a96
+  main8 ::
+    GHC.Int.Int64
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S(S),1*U(U)><S,U>, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: GHC.Int.Int64)
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w of ww { GHC.Int.I64# ww1 -> Main.$wgo12 ww1 w1 }) -}
+431ad01cf6d08624bb5ab456d359e9f8
+  main9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "accept time order w/ IORef"#) -}
+237e50cb86be4a21cc067120183627ad
+  parsePktTime :: Criterion.Types.Benchmark
+  {- Strictness: m2,
+     Unfolding: (Criterion.Types.Benchmark
+                   Main.parsePktTime3
+                   Main.parsePktTime1
+                     `cast`
+                   (Trans
+                        (<GHC.Int.Int64>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                        (Sym (Criterion.Types.N:Benchmarkable[0])))) -}
+859ab3e53a7e609d3270c12473225aa2
+  parsePktTime1 ::
+    GHC.Int.Int64
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2,
+     Unfolding: (\ (w :: GHC.Int.Int64)
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w of ww { GHC.Int.I64# ww1 ->
+                 Main.parsePktTime_$s$wgo12 w1 ww1 Main.parsePktTime2 }) -}
+f1b1ca85d9485ad547f05a0739c3dec7
+  parsePktTime2 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case GHC.Prim.newMutVar#
+                        @ GHC.ForeignPtr.Finalizers
+                        @ GHC.Prim.RealWorld
+                        GHC.ForeignPtr.NoFinalizers
+                        GHC.Prim.realWorld# of ds1 { (#,#) ipv ipv1 ->
+                 let {
+                   addr# :: GHC.Prim.Addr#
+                   = "B6034KR4301F3250500940000679900096000030800095000009400094000023100093000019900092000013400077890009700002340009800001300009900002820010000004150010100000520039700120007000800160009004590011001400170027000709002997"#
+                 } in
+                 case {__pkg_ccall bytestring-0.10.8.1@bytestring-0.10.8.1 strlen GHC.Prim.Addr#
+                                                                                  -> GHC.Prim.State#
+                                                                                       GHC.Prim.RealWorld
+                                                                                  -> (# GHC.Prim.State#
+                                                                                          GHC.Prim.RealWorld,
+                                                                                        GHC.Prim.Word# #)}
+                        addr#
+                        ipv of wild { (#,#) ds3 ds4 ->
+                 Data.ByteString.Internal.PS
+                   addr#
+                   (GHC.ForeignPtr.PlainForeignPtr ipv1)
+                   0#
+                   (GHC.Prim.word2Int# ds4) } }) -}
+0c7da6448069315c0628b61bb73c6906
+  parsePktTime3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "parser"#) -}
+a4db2dad4ba6d63eab529aae3705a1a2
+  parsePktTime_$s$wgo12 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> GHC.Prim.Int#
+    -> Data.ByteString.Internal.ByteString
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <S,U><S,U><L,U> -}
+012515b4b64aec4e4743e456d2e3d1ab
+  quoteAcceptOrdTime :: GHC.Types.IO [Data.Text.Internal.Text]
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.quoteAcceptOrdTime1
+                  `cast`
+                (Sym (GHC.Types.N:IO[0] <[Data.Text.Internal.Text]>_R)) -}
+211bc9c1cedfcd8d38348039147a145e
+  quoteAcceptOrdTime' :: GHC.Types.IO [Data.Text.Internal.Text]
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.quoteAcceptOrdTime'1
+                  `cast`
+                (Sym (GHC.Types.N:IO[0] <[Data.Text.Internal.Text]>_R)) -}
+0b0263bd0ed1b4396ebfef6e37b7d46a
+  quoteAcceptOrdTime'1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          [Data.Text.Internal.Text] #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newMutVar#
+                        @ (Data.Map.Base.Map
+                             Parser.Types.AcceptTime
+                             (Parser.Types.PktTime, Parser.Types.Packet))
+                        @ GHC.Prim.RealWorld
+                        (Data.Map.Base.Tip
+                           @ Parser.Types.AcceptTime
+                           @ (Parser.Types.PktTime, Parser.Types.Packet))
+                        s of ds { (#,#) ipv ipv1 ->
+                 Main.quoteAcceptOrdTime'2
+                   (GHC.STRef.STRef
+                      @ GHC.Prim.RealWorld
+                      @ (Data.Map.Base.Map
+                           Parser.Types.AcceptTime
+                           (Parser.Types.PktTime, Parser.Types.Packet))
+                      ipv1)
+                     `cast`
+                   (Sym (GHC.IORef.N:IORef[0]) <Data.Map.Base.Map
+                                                  Parser.Types.AcceptTime
+                                                  (Parser.Types.PktTime, Parser.Types.Packet)>_N)
+                   ipv }) -}
+d5cf83fc9b60542a86b98606dcba62ad
+  quoteAcceptOrdTime'2 ::
+    GHC.IORef.IORef
+      (Data.Map.Base.Map
+         Parser.Types.AcceptTime
+         (Parser.Types.PktTime, Parser.Types.Packet))
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          [Data.Text.Internal.Text] #)
+  {- Arity: 2, Strictness: <L,U(U)><S,U>,
+     Unfolding: (\ (buf :: GHC.IORef.IORef
+                             (Data.Map.Base.Map
+                                Parser.Types.AcceptTime
+                                (Parser.Types.PktTime, Parser.Types.Packet)))
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case Capture.readPkts1
+                        Main.quoteAcceptOrdTime2
+                        (Capture.enqueueAcceptOrd'1 buf)
+                          `cast`
+                        (<Network.Pcap.Base.PktHdr>_R
+                         ->_R <Data.ByteString.Internal.ByteString>_R
+                         ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case buf
+                        `cast`
+                      (GHC.IORef.N:IORef[0] <Data.Map.Base.Map
+                                               Parser.Types.AcceptTime
+                                               (Parser.Types.PktTime,
+                                                Parser.Types.Packet)>_N) of wild { GHC.STRef.STRef var# ->
+                 case GHC.Prim.readMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ (Data.Map.Base.Map
+                             Parser.Types.AcceptTime
+                             (Parser.Types.PktTime, Parser.Types.Packet))
+                        var#
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 (# ipv2,
+                    Main.quoteAcceptOrdTime'_go10
+                      (GHC.Types.[] @ Data.Text.Internal.Text)
+                      ipv3 #) } } }) -}
+fd14cf5c26f13b36598cf901941cb141
+  quoteAcceptOrdTime'_go10 ::
+    [Data.Text.Internal.Text]
+    -> Data.Map.Base.Map
+         Parser.Types.AcceptTime (Parser.Types.PktTime, Parser.Types.Packet)
+    -> [Data.Text.Internal.Text]
+  {- Arity: 2, Strictness: <L,1*U><S,1*U> -}
+cf0bfa5f72e16744b9f635fde06285ec
+  quoteAcceptOrdTime1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          [Data.Text.Internal.Text] #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newMVar#
+                        @ GHC.Prim.RealWorld
+                        @ (Data.Map.Base.Map
+                             Parser.Types.AcceptTime
+                             (Parser.Types.PktTime, Parser.Types.Packet))
+                        s of ds { (#,#) ipv ipv1 ->
+                 case GHC.Prim.putMVar#
+                        @ GHC.Prim.RealWorld
+                        @ (Data.Map.Base.Map
+                             Parser.Types.AcceptTime
+                             (Parser.Types.PktTime, Parser.Types.Packet))
+                        ipv1
+                        (Data.Map.Base.Tip
+                           @ Parser.Types.AcceptTime
+                           @ (Parser.Types.PktTime, Parser.Types.Packet))
+                        ipv of s2# { DEFAULT ->
+                 case Capture.readPkts1
+                        Main.quoteAcceptOrdTime2
+                        (Capture.enqueueAcceptOrd1
+                           (GHC.MVar.MVar
+                              @ (Data.Map.Base.Map
+                                   Parser.Types.AcceptTime
+                                   (Parser.Types.PktTime, Parser.Types.Packet))
+                              ipv1))
+                          `cast`
+                        (<Network.Pcap.Base.PktHdr>_R
+                         ->_R <Data.ByteString.Internal.ByteString>_R
+                         ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                        s2# of ds1 { (#,#) ipv2 ipv3 ->
+                 case GHC.Prim.takeMVar#
+                        @ GHC.Prim.RealWorld
+                        @ (Data.Map.Base.Map
+                             Parser.Types.AcceptTime
+                             (Parser.Types.PktTime, Parser.Types.Packet))
+                        ipv1
+                        ipv2 of ds2 { (#,#) ipv4 ipv5 ->
+                 (# ipv4,
+                    Main.quoteAcceptOrdTime_go10
+                      (GHC.Types.[] @ Data.Text.Internal.Text)
+                      ipv5 #) } } } }) -}
+0120ec36eb30d5b129bd45a6201e8ea2
+  quoteAcceptOrdTime2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "test/mdf-kospi200.20110216-0.pcap"#) -}
+5a5ee75f29ae2e84259b3a0870f429c5
+  quoteAcceptOrdTime_go10 ::
+    [Data.Text.Internal.Text]
+    -> Data.Map.Base.Map
+         Parser.Types.AcceptTime (Parser.Types.PktTime, Parser.Types.Packet)
+    -> [Data.Text.Internal.Text]
+  {- Arity: 2, Strictness: <L,1*U><S,1*U> -}
+3677cc8c390629f55f62fe17316ad22d
+  quotePktOrder :: GHC.Types.IO [Data.Text.Internal.Text]
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.quotePktOrder1
+                  `cast`
+                (Sym (GHC.Types.N:IO[0] <[Data.Text.Internal.Text]>_R)) -}
+31d2d8b7626883215ac218e7ec048271
+  quotePktOrder' :: GHC.Types.IO [Data.Text.Internal.Text]
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.quotePktOrder'1
+                  `cast`
+                (Sym (GHC.Types.N:IO[0] <[Data.Text.Internal.Text]>_R)) -}
+68f8a8c5907acb1a0614b2bf10cb875f
+  quotePktOrder'1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          [Data.Text.Internal.Text] #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newMutVar#
+                        @ (Data.Map.Base.Map
+                             Parser.Types.PktTime
+                             (Parser.Types.AcceptTime, Parser.Types.Packet))
+                        @ GHC.Prim.RealWorld
+                        (Data.Map.Base.Tip
+                           @ Parser.Types.PktTime
+                           @ (Parser.Types.AcceptTime, Parser.Types.Packet))
+                        s of ds { (#,#) ipv ipv1 ->
+                 Main.quotePktOrder'2
+                   (GHC.STRef.STRef
+                      @ GHC.Prim.RealWorld
+                      @ (Data.Map.Base.Map
+                           Parser.Types.PktTime
+                           (Parser.Types.AcceptTime, Parser.Types.Packet))
+                      ipv1)
+                     `cast`
+                   (Sym (GHC.IORef.N:IORef[0]) <Data.Map.Base.Map
+                                                  Parser.Types.PktTime
+                                                  (Parser.Types.AcceptTime, Parser.Types.Packet)>_N)
+                   ipv }) -}
+87ad81aef3f5eb9b6dff5a9d8bbdbc53
+  quotePktOrder'2 ::
+    GHC.IORef.IORef
+      (Data.Map.Base.Map
+         Parser.Types.PktTime
+         (Parser.Types.AcceptTime, Parser.Types.Packet))
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          [Data.Text.Internal.Text] #)
+  {- Arity: 2, Strictness: <L,U(U)><S,U>,
+     Unfolding: (\ (buf :: GHC.IORef.IORef
+                             (Data.Map.Base.Map
+                                Parser.Types.PktTime
+                                (Parser.Types.AcceptTime, Parser.Types.Packet)))
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case Capture.readPkts1
+                        Main.quoteAcceptOrdTime2
+                        (Capture.enqueuePktOrd'1 buf)
+                          `cast`
+                        (<Network.Pcap.Base.PktHdr>_R
+                         ->_R <Data.ByteString.Internal.ByteString>_R
+                         ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case buf
+                        `cast`
+                      (GHC.IORef.N:IORef[0] <Data.Map.Base.Map
+                                               Parser.Types.PktTime
+                                               (Parser.Types.AcceptTime,
+                                                Parser.Types.Packet)>_N) of wild { GHC.STRef.STRef var# ->
+                 case GHC.Prim.readMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ (Data.Map.Base.Map
+                             Parser.Types.PktTime
+                             (Parser.Types.AcceptTime, Parser.Types.Packet))
+                        var#
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 (# ipv2,
+                    Main.quotePktOrder'_go10
+                      (GHC.Types.[] @ Data.Text.Internal.Text)
+                      ipv3 #) } } }) -}
+19a3142cede9f75c8eb18119d37bfd62
+  quotePktOrder'_go10 ::
+    [Data.Text.Internal.Text]
+    -> Data.Map.Base.Map
+         Parser.Types.PktTime (Parser.Types.AcceptTime, Parser.Types.Packet)
+    -> [Data.Text.Internal.Text]
+  {- Arity: 2, Strictness: <L,1*U><S,1*U> -}
+056d422835c35052f9a6ed5f12cd5f84
+  quotePktOrder1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          [Data.Text.Internal.Text] #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newMVar#
+                        @ GHC.Prim.RealWorld
+                        @ (Data.Map.Base.Map
+                             Parser.Types.PktTime
+                             (Parser.Types.AcceptTime, Parser.Types.Packet))
+                        s of ds { (#,#) ipv ipv1 ->
+                 case GHC.Prim.putMVar#
+                        @ GHC.Prim.RealWorld
+                        @ (Data.Map.Base.Map
+                             Parser.Types.PktTime
+                             (Parser.Types.AcceptTime, Parser.Types.Packet))
+                        ipv1
+                        (Data.Map.Base.Tip
+                           @ Parser.Types.PktTime
+                           @ (Parser.Types.AcceptTime, Parser.Types.Packet))
+                        ipv of s2# { DEFAULT ->
+                 case Capture.readPkts1
+                        Main.quoteAcceptOrdTime2
+                        (Capture.enqueuePktOrd1
+                           (GHC.MVar.MVar
+                              @ (Data.Map.Base.Map
+                                   Parser.Types.PktTime
+                                   (Parser.Types.AcceptTime, Parser.Types.Packet))
+                              ipv1))
+                          `cast`
+                        (<Network.Pcap.Base.PktHdr>_R
+                         ->_R <Data.ByteString.Internal.ByteString>_R
+                         ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                        s2# of ds1 { (#,#) ipv2 ipv3 ->
+                 case GHC.Prim.takeMVar#
+                        @ GHC.Prim.RealWorld
+                        @ (Data.Map.Base.Map
+                             Parser.Types.PktTime
+                             (Parser.Types.AcceptTime, Parser.Types.Packet))
+                        ipv1
+                        ipv2 of ds2 { (#,#) ipv4 ipv5 ->
+                 (# ipv4,
+                    Main.quotePktOrder_go10
+                      (GHC.Types.[] @ Data.Text.Internal.Text)
+                      ipv5 #) } } } }) -}
+e701af56efe4ed869f7a0f8043eb081d
+  quotePktOrder_go10 ::
+    [Data.Text.Internal.Text]
+    -> Data.Map.Base.Map
+         Parser.Types.PktTime (Parser.Types.AcceptTime, Parser.Types.Packet)
+    -> [Data.Text.Internal.Text]
+  {- Arity: 2, Strictness: <L,1*U><S,1*U> -}
+"SPEC/Main $fTextShow(,) @ AcceptTime @ Packet" [ALWAYS] forall ($dTextShow :: TextShow.Classes.TextShow
+                                                                                 Parser.Types.AcceptTime)
+                                                                ($dTextShow1 :: TextShow.Classes.TextShow
+                                                                                  Parser.Types.Packet)
+  TextShow.Data.Tuple.$fTextShow(,) @ Parser.Types.AcceptTime
+                                    @ Parser.Types.Packet
+                                    $dTextShow
+                                    $dTextShow1
+  = Main.$s$fTextShow(,)1
+"SPEC/Main $fTextShow(,) @ PktTime @ Packet" [ALWAYS] forall ($dTextShow :: TextShow.Classes.TextShow
+                                                                              Parser.Types.PktTime)
+                                                             ($dTextShow1 :: TextShow.Classes.TextShow
+                                                                               Parser.Types.Packet)
+  TextShow.Data.Tuple.$fTextShow(,) @ Parser.Types.PktTime
+                                    @ Parser.Types.Packet
+                                    $dTextShow
+                                    $dTextShow1
+  = Main.$s$fTextShow(,)
+"SPEC/Main $fTextShow(,)_$cshowb @ AcceptTime @ Packet" [ALWAYS] forall ($dTextShow :: TextShow.Classes.TextShow
+                                                                                         Parser.Types.AcceptTime)
+                                                                        ($dTextShow1 :: TextShow.Classes.TextShow
+                                                                                          Parser.Types.Packet)
+  TextShow.Data.Tuple.$fTextShow(,)_$cshowb @ Parser.Types.AcceptTime
+                                            @ Parser.Types.Packet
+                                            $dTextShow
+                                            $dTextShow1
+  = Main.$s$fTextShow(,)_$s$fTextShow(,)_$cshowb1
+"SPEC/Main $fTextShow(,)_$cshowb @ PktTime @ Packet" [ALWAYS] forall ($dTextShow :: TextShow.Classes.TextShow
+                                                                                      Parser.Types.PktTime)
+                                                                     ($dTextShow1 :: TextShow.Classes.TextShow
+                                                                                       Parser.Types.Packet)
+  TextShow.Data.Tuple.$fTextShow(,)_$cshowb @ Parser.Types.PktTime
+                                            @ Parser.Types.Packet
+                                            $dTextShow
+                                            $dTextShow1
+  = Main.$s$fTextShow(,)_$s$fTextShow(,)_$cshowb
+"SPEC/Main $fTextShow(,)_$cshowbList @ AcceptTime @ Packet" [ALWAYS] forall ($dTextShow :: TextShow.Classes.TextShow
+                                                                                             Parser.Types.AcceptTime)
+                                                                            ($dTextShow1 :: TextShow.Classes.TextShow
+                                                                                              Parser.Types.Packet)
+  TextShow.Data.Tuple.$fTextShow(,)_$cshowbList @ Parser.Types.AcceptTime
+                                                @ Parser.Types.Packet
+                                                $dTextShow
+                                                $dTextShow1
+  = Main.$s$fTextShow(,)_$s$fTextShow(,)_$cshowbList1
+"SPEC/Main $fTextShow(,)_$cshowbList @ PktTime @ Packet" [ALWAYS] forall ($dTextShow :: TextShow.Classes.TextShow
+                                                                                          Parser.Types.PktTime)
+                                                                         ($dTextShow1 :: TextShow.Classes.TextShow
+                                                                                           Parser.Types.Packet)
+  TextShow.Data.Tuple.$fTextShow(,)_$cshowbList @ Parser.Types.PktTime
+                                                @ Parser.Types.Packet
+                                                $dTextShow
+                                                $dTextShow1
+  = Main.$s$fTextShow(,)_$s$fTextShow(,)_$cshowbList
+"SPEC/Main $fTextShow(,)_$cshowtList @ AcceptTime @ Packet" [ALWAYS] forall ($dTextShow :: TextShow.Classes.TextShow
+                                                                                             Parser.Types.AcceptTime)
+                                                                            ($dTextShow1 :: TextShow.Classes.TextShow
+                                                                                              Parser.Types.Packet)
+  TextShow.Data.Tuple.$fTextShow(,)_$cshowtList @ Parser.Types.AcceptTime
+                                                @ Parser.Types.Packet
+                                                $dTextShow
+                                                $dTextShow1
+  = Main.$s$fTextShow(,)_$s$fTextShow(,)_$cshowtList1
+"SPEC/Main $fTextShow(,)_$cshowtList @ PktTime @ Packet" [ALWAYS] forall ($dTextShow :: TextShow.Classes.TextShow
+                                                                                          Parser.Types.PktTime)
+                                                                         ($dTextShow1 :: TextShow.Classes.TextShow
+                                                                                           Parser.Types.Packet)
+  TextShow.Data.Tuple.$fTextShow(,)_$cshowtList @ Parser.Types.PktTime
+                                                @ Parser.Types.Packet
+                                                $dTextShow
+                                                $dTextShow1
+  = Main.$s$fTextShow(,)_$s$fTextShow(,)_$cshowtList
+"SPEC/Main $fTextShow(,)_$cshowtPrec @ AcceptTime @ Packet" [ALWAYS] forall ($dTextShow :: TextShow.Classes.TextShow
+                                                                                             Parser.Types.AcceptTime)
+                                                                            ($dTextShow1 :: TextShow.Classes.TextShow
+                                                                                              Parser.Types.Packet)
+  TextShow.Data.Tuple.$fTextShow(,)_$cshowtPrec @ Parser.Types.AcceptTime
+                                                @ Parser.Types.Packet
+                                                $dTextShow
+                                                $dTextShow1
+  = Main.$s$fTextShow(,)_$s$fTextShow(,)_$cshowtPrec1
+"SPEC/Main $fTextShow(,)_$cshowtPrec @ PktTime @ Packet" [ALWAYS] forall ($dTextShow :: TextShow.Classes.TextShow
+                                                                                          Parser.Types.PktTime)
+                                                                         ($dTextShow1 :: TextShow.Classes.TextShow
+                                                                                           Parser.Types.Packet)
+  TextShow.Data.Tuple.$fTextShow(,)_$cshowtPrec @ Parser.Types.PktTime
+                                                @ Parser.Types.Packet
+                                                $dTextShow
+                                                $dTextShow1
+  = Main.$s$fTextShow(,)_$s$fTextShow(,)_$cshowtPrec
+"SPEC/Main $fTextShow(,)_$cshowtl @ AcceptTime @ Packet" [ALWAYS] forall ($dTextShow :: TextShow.Classes.TextShow
+                                                                                          Parser.Types.AcceptTime)
+                                                                         ($dTextShow1 :: TextShow.Classes.TextShow
+                                                                                           Parser.Types.Packet)
+  TextShow.Data.Tuple.$fTextShow(,)_$cshowtl @ Parser.Types.AcceptTime
+                                             @ Parser.Types.Packet
+                                             $dTextShow
+                                             $dTextShow1
+  = Main.$s$fTextShow(,)_$s$fTextShow(,)_$cshowtl1
+"SPEC/Main $fTextShow(,)_$cshowtl @ PktTime @ Packet" [ALWAYS] forall ($dTextShow :: TextShow.Classes.TextShow
+                                                                                       Parser.Types.PktTime)
+                                                                      ($dTextShow1 :: TextShow.Classes.TextShow
+                                                                                        Parser.Types.Packet)
+  TextShow.Data.Tuple.$fTextShow(,)_$cshowtl @ Parser.Types.PktTime
+                                             @ Parser.Types.Packet
+                                             $dTextShow
+                                             $dTextShow1
+  = Main.$s$fTextShow(,)_$s$fTextShow(,)_$cshowtl
+"SPEC/Main $fTextShow(,)_$cshowtlList @ AcceptTime @ Packet" [ALWAYS] forall ($dTextShow :: TextShow.Classes.TextShow
+                                                                                              Parser.Types.AcceptTime)
+                                                                             ($dTextShow1 :: TextShow.Classes.TextShow
+                                                                                               Parser.Types.Packet)
+  TextShow.Data.Tuple.$fTextShow(,)_$cshowtlList @ Parser.Types.AcceptTime
+                                                 @ Parser.Types.Packet
+                                                 $dTextShow
+                                                 $dTextShow1
+  = Main.$s$fTextShow(,)_$s$fTextShow(,)_$cshowtlList1
+"SPEC/Main $fTextShow(,)_$cshowtlList @ PktTime @ Packet" [ALWAYS] forall ($dTextShow :: TextShow.Classes.TextShow
+                                                                                           Parser.Types.PktTime)
+                                                                          ($dTextShow1 :: TextShow.Classes.TextShow
+                                                                                            Parser.Types.Packet)
+  TextShow.Data.Tuple.$fTextShow(,)_$cshowtlList @ Parser.Types.PktTime
+                                                 @ Parser.Types.Packet
+                                                 $dTextShow
+                                                 $dTextShow1
+  = Main.$s$fTextShow(,)_$s$fTextShow(,)_$cshowtlList
+"SPEC/Main $fTextShow(,)_$cshowtlPrec @ AcceptTime @ Packet" [ALWAYS] forall ($dTextShow :: TextShow.Classes.TextShow
+                                                                                              Parser.Types.AcceptTime)
+                                                                             ($dTextShow1 :: TextShow.Classes.TextShow
+                                                                                               Parser.Types.Packet)
+  TextShow.Data.Tuple.$fTextShow(,)_$cshowtlPrec @ Parser.Types.AcceptTime
+                                                 @ Parser.Types.Packet
+                                                 $dTextShow
+                                                 $dTextShow1
+  = Main.$s$fTextShow(,)_$s$fTextShow(,)_$cshowtlPrec1
+"SPEC/Main $fTextShow(,)_$cshowtlPrec @ PktTime @ Packet" [ALWAYS] forall ($dTextShow :: TextShow.Classes.TextShow
+                                                                                           Parser.Types.PktTime)
+                                                                          ($dTextShow1 :: TextShow.Classes.TextShow
+                                                                                            Parser.Types.Packet)
+  TextShow.Data.Tuple.$fTextShow(,)_$cshowtlPrec @ Parser.Types.PktTime
+                                                 @ Parser.Types.Packet
+                                                 $dTextShow
+                                                 $dTextShow1
+  = Main.$s$fTextShow(,)_$s$fTextShow(,)_$cshowtlPrec
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

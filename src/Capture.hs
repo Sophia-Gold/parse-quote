@@ -6,7 +6,9 @@ import Capture.Types
 import Control.Concurrent.MVar
 import Data.ByteString.Char8 (ByteString)
 import Data.Map.Strict (insert)
-import Data.Time.Clock (picosecondsToDiffTime)
+import Data.Time.Calendar (fromGregorian)
+import Data.Time.Clock (UTCTime (..), picosecondsToDiffTime)
+import Data.Time.Clock.POSIX (posixSecondsToUTCTime)
 import Network.Pcap
 import System.IO (FilePath)
 
@@ -25,14 +27,20 @@ readPkts path callback = do
     
 enqueueAcceptOrd :: AcceptTimeBuffer -> CallbackBS
 enqueueAcceptOrd buf = \hdr pkt ->
-  let pt = PktTime $ picosecondsToDiffTime $ (fromIntegral $ hdrUseconds hdr)^6 in  -- microseconds -> picoseconds
+  let pt = PktTime $ posixSecondsToUTCTime $ realToFrac $
+                       (fromIntegral $ hdrSeconds hdr)
+                     + (fromIntegral $ hdrUseconds hdr)*10^^(-6)  -- microseconds -> seconds
+                     + 64800 in  -- UTC+9in 
   case parsePkt pkt of
     Left err -> return ()
     Right (at, p) -> modifyMVar_ buf (\m -> pure $ insert at (pt, p) m) 
       
 enqueuePktOrd :: PktTimeBuffer -> CallbackBS
 enqueuePktOrd buf = \hdr pkt ->
-  let pt = PktTime $ picosecondsToDiffTime $ (fromIntegral $ hdrUseconds hdr)^6 in  -- microseconds -> picoseconds
+  let pt = PktTime $ posixSecondsToUTCTime $ realToFrac $
+                       (fromIntegral $ hdrSeconds hdr)
+                     + (fromIntegral $ hdrUseconds hdr)*10^^(-6)  -- microseconds -> seconds 
+                     + 64800 in  -- UTC+9
   case parsePkt pkt of
     Left err -> return ()
     Right (at, p) -> modifyMVar_ buf (\m -> pure $ insert pt (at, p) m)

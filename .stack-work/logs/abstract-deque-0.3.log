@@ -1,0 +1,14 @@
+Configuring abstract-deque-0.3...
+Building abstract-deque-0.3...
+Preprocessing library abstract-deque-0.3...
+[1 of 4] Compiling Data.Concurrent.Deque.Class ( Data/Concurrent/Deque/Class.hs, .stack-work/dist/x86_64-linux-nix/Cabal-1.24.2.0/build/Data/Concurrent/Deque/Class.o )
+[2 of 4] Compiling Data.Concurrent.Deque.Debugger ( Data/Concurrent/Deque/Debugger.hs, .stack-work/dist/x86_64-linux-nix/Cabal-1.24.2.0/build/Data/Concurrent/Deque/Debugger.o )
+[3 of 4] Compiling Data.Concurrent.Deque.Reference ( Data/Concurrent/Deque/Reference.hs, .stack-work/dist/x86_64-linux-nix/Cabal-1.24.2.0/build/Data/Concurrent/Deque/Reference.o )
+
+Data/Concurrent/Deque/Reference.hs:50:1: warning: [-Wtabs]
+    Tab character found here.
+    Please use spaces instead.
+[4 of 4] Compiling Data.Concurrent.Deque.Reference.DequeInstance ( Data/Concurrent/Deque/Reference/DequeInstance.hs, .stack-work/dist/x86_64-linux-nix/Cabal-1.24.2.0/build/Data/Concurrent/Deque/Reference/DequeInstance.o )
+Installing library in
+/home/sophia/.stack/snapshots/x86_64-linux-nix/lts-9.21/8.0.2/lib/x86_64-linux-ghc-8.0.2/abstract-deque-0.3-HsNSfU9Tgm8E1vVRMg1lQ0
+Registering abstract-deque-0.3...

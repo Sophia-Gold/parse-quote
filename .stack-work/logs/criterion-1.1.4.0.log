@@ -1,0 +1,28 @@
+Configuring criterion-1.1.4.0...
+Building criterion-1.1.4.0...
+Preprocessing library criterion-1.1.4.0...
+[ 1 of 13] Compiling Paths_criterion  ( .stack-work/dist/x86_64-linux-nix/Cabal-1.24.2.0/build/autogen/Paths_criterion.hs, .stack-work/dist/x86_64-linux-nix/Cabal-1.24.2.0/build/Paths_criterion.o )
+[ 2 of 13] Compiling Criterion.Types  ( Criterion/Types.hs, .stack-work/dist/x86_64-linux-nix/Cabal-1.24.2.0/build/Criterion/Types.o )
+[ 3 of 13] Compiling Criterion.Monad.Internal ( Criterion/Monad/Internal.hs, .stack-work/dist/x86_64-linux-nix/Cabal-1.24.2.0/build/Criterion/Monad/Internal.o )
+[ 4 of 13] Compiling Criterion.Measurement ( Criterion/Measurement.hs, .stack-work/dist/x86_64-linux-nix/Cabal-1.24.2.0/build/Criterion/Measurement.o )
+[ 5 of 13] Compiling Criterion.Monad  ( Criterion/Monad.hs, .stack-work/dist/x86_64-linux-nix/Cabal-1.24.2.0/build/Criterion/Monad.o )
+[ 6 of 13] Compiling Criterion.Report ( Criterion/Report.hs, .stack-work/dist/x86_64-linux-nix/Cabal-1.24.2.0/build/Criterion/Report.o )
+
+Criterion/Report.hs:36:1: warning: [-Wdeprecations]
+    Module `Data.Aeson.Encode' is deprecated:
+      Use Data.Aeson or Data.Aeson.Text instead
+
+Criterion/Report.hs:99:34: warning: [-Wdeprecations]
+    In the use of `encodeToTextBuilder'
+    (imported from Data.Aeson.Encode):
+    Deprecated: "Use Data.Aeson or Data.Aeson.Text instead"
+[ 7 of 13] Compiling Criterion.IO.Printf ( Criterion/IO/Printf.hs, .stack-work/dist/x86_64-linux-nix/Cabal-1.24.2.0/build/Criterion/IO/Printf.o )
+[ 8 of 13] Compiling Criterion.IO     ( Criterion/IO.hs, .stack-work/dist/x86_64-linux-nix/Cabal-1.24.2.0/build/Criterion/IO.o )
+[ 9 of 13] Compiling Criterion.Analysis ( Criterion/Analysis.hs, .stack-work/dist/x86_64-linux-nix/Cabal-1.24.2.0/build/Criterion/Analysis.o )
+[10 of 13] Compiling Criterion.Internal ( Criterion/Internal.hs, .stack-work/dist/x86_64-linux-nix/Cabal-1.24.2.0/build/Criterion/Internal.o )
+[11 of 13] Compiling Criterion.Main.Options ( Criterion/Main/Options.hs, .stack-work/dist/x86_64-linux-nix/Cabal-1.24.2.0/build/Criterion/Main/Options.o )
+[12 of 13] Compiling Criterion.Main   ( Criterion/Main.hs, .stack-work/dist/x86_64-linux-nix/Cabal-1.24.2.0/build/Criterion/Main.o )
+[13 of 13] Compiling Criterion        ( Criterion.hs, .stack-work/dist/x86_64-linux-nix/Cabal-1.24.2.0/build/Criterion.o )
+Installing library in
+/home/sophia/.stack/snapshots/x86_64-linux-nix/lts-9.21/8.0.2/lib/x86_64-linux-ghc-8.0.2/criterion-1.1.4.0-GnkWkj6GOQz1bAEroTtgH5
+Registering criterion-1.1.4.0...
